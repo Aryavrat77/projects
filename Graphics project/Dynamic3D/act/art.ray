@@ -1,0 +1,16 @@
+#camera  0 5 10  0 0 -1  0 1 0  45
+#light_point  1 1 1  1 1 1  1 1 1  0 10 0  1 0 0
+
+#material  0 0 0  0.8 0.8 0.8  1 1 1  10  0 0 0  1  -1
+#material  1 0 0  0.8 0.8 0.8  1 1 1  10  0 0 0  1  -1
+
+#shape_sphere  0 0 0  1
+#shape_plane  1 0 -1 0  20
+
+#key_file  ball_bounce.key
+
+#dynamic_affine  BallPosition
+  #static_affine  1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1
+    #shape_list_begin
+      #shape_sphere  0 0 0  1
+    #shape_list_end

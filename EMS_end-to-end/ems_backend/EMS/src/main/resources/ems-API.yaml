@@ -1,0 +1,700 @@
+openapi: 3.0.0
+info:
+  title: EMS API
+  version: 1.0.0
+  description: APIs for EMS implemented with OpenAPI codegen
+
+servers:
+  - url: http://localhost:8080/api
+    description: EMS API
+
+tags:
+  - name: Documents
+    description: Endpoints related to document management
+  - name: Employees
+    description: Endpoints related to employee management
+
+paths:
+  /r4/ems/documents:
+    post:
+      tags:
+        - Documents
+      summary: Create a document
+      operationId: createDocument
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DocumentDto'
+      responses:
+        '200':
+          description: Document created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentDto'
+  /r4/ems/documents/{id}:
+    put:
+      tags:
+        - Documents
+      summary: Update a document
+      operationId: updateDocument
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DocumentDto'
+      responses:
+        '200':
+          description: Document updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentDto'
+    get:
+      tags:
+        - Documents
+      summary: Get a document
+      operationId: getDocument
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Document retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentDto'
+    delete:
+      tags:
+        - Documents
+      summary: Delete a document
+      operationId: deleteDocument
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Document deleted successfully
+  /r4/ems/documents/_search:
+    post:
+      tags:
+        - Documents
+      summary: Search documents
+      operationId: searchDocuments
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                criteria:
+                  type: object
+                  description: Filtering criteria for searching documents
+      responses:
+        '200':
+          description: Search results returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentSearchResults'
+
+  /r4/ems/employees:
+    get:
+      tags:
+        - Employees
+      summary: Retrieve a list of employees
+      operationId: getEmployees
+      responses:
+        '200':
+          description: A list of employees
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EmployeeDto'
+    post:
+      tags:
+        - Employees
+      summary: Create a new employee
+      operationId: createEmployee
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmployeeDto'
+      responses:
+        '201':
+          description: Employee created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmployeeDto'
+  /r4/ems/employees/{id}:
+    get:
+      tags:
+        - Employees
+      summary: Retrieve an employee by ID
+      operationId: getEmployeeById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Employee details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmployeeDto'
+    put:
+      tags:
+        - Employees
+      summary: Update an employee by ID
+      operationId: updateEmployee
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmployeeDto'
+      responses:
+        '200':
+          description: Employee updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmployeeDto'
+    delete:
+      tags:
+        - Employees
+      summary: Delete an employee by ID
+      operationId: deleteEmployee
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Employee deleted successfully
+  /r4/ems/employees/{id}/workhistory:
+    get:
+      tags:
+        - Employees
+      summary: Retrieve the work history of an employee by ID
+      operationId: getEmployeeWorkHistory
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Employee work history details
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/WorkHistoryDto'
+    post:
+      tags:
+        - Employees
+      summary: Add work history for an employee
+      operationId: addEmployeeWorkHistory
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WorkHistoryDto'
+      responses:
+        '201':
+          description: Work history added successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkHistoryDto'
+    put:
+      tags:
+        - Employees
+      summary: Update an employee's work history
+      operationId: updateEmployeeWorkHistory
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WorkHistoryDto'
+      responses:
+        '200':
+          description: Work history updated successfully
+    delete:
+      tags:
+        - Employees
+      summary: Delete an employee's work history entry
+      operationId: deleteEmployeeWorkHistory
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Work history entry deleted successfully
+
+  /r4/ems/employees/{id}/education:
+    get:
+      tags:
+        - Employees
+      summary: Retrieve the education  of an employee by ID
+      operationId: getEmployeeEducation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Employee education details
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EducationDto'
+    post:
+      tags:
+        - Employees
+      summary: Add education history for an employee
+      operationId: addEmployeeEducation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EducationDto'
+      responses:
+        '201':
+          description: Education created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EducationDto'
+    put:
+      tags:
+        - Employees
+      summary: Update an employee's education
+      operationId: updateEmployeeEducation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EducationDto'
+      responses:
+        '200':
+          description: Education updated successfully
+    delete:
+      tags:
+        - Employees
+      summary: Delete an employee's Education entry
+      operationId: deleteEmployeeEducation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Employee education entry deleted successfully
+
+  /r4/ems/login:
+    post:
+      tags:
+        - Authentication
+      summary: User login
+      operationId: userLogin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginDto'
+      responses:
+        '200':
+          description: User Logged in Successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: JWT token
+        '401':
+          description: Unauthorized, invalid credentials
+
+  /r4/ems/signup:
+    post:
+      tags:
+        - Authentication
+      summary: User signup
+      operationId: userSignup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignUpDto'
+      responses:
+        '201':
+          description: User signed up successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserDto'
+        '400':
+          description: Bad request, invalid input
+
+components:
+  schemas:
+    DocumentDto:
+      type: object
+      description: Data transfer object for a document, encapsulating all details necessary for document handling in the application.
+      properties:
+        document_id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+        document_type:
+          type: string
+        document_name:
+          type: string
+        file_path:
+          type: string
+        upload_date:
+          type: string
+          format: date-time
+
+    DocumentSearchResults:
+      type: object
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/DocumentDto'
+
+    EmployeeDto:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        first_name:
+          type: string
+        last_name:
+          type: string
+        middle_name:
+          type: string
+        cell_phone:
+          type: string
+        previous_names:
+          type: string
+        preferred_name:
+          type: string
+        home_address:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip_code:
+          type: string
+        email:
+          type: string
+        job_title:
+          type: string
+        job_type:
+          type: string
+        available_start_date:
+          type: string
+          format: date
+        availability:
+          type: object
+          properties:
+            overtime:
+              type: boolean
+            weekends:
+              type: boolean
+            holidays:
+              type: boolean
+            second_shift:
+              type: boolean
+            third_shift:
+              type: boolean
+            flex_schedule:
+              type: boolean
+            non_standard_schedule:
+              type: boolean
+        employment_type:
+          type: string
+          enum:
+            - full_time
+            - part_time
+            - contract
+        notice_period:
+          type: string
+        non_compete:
+          type: boolean
+        drivers_license:
+          type: boolean
+        license_suspended:
+          type: boolean
+        has_transportation:
+          type: boolean
+        can_visit_clients:
+          type: boolean
+        right_to_work:
+          type: boolean
+        need_sponsorship:
+          type: boolean
+        covid_vaccinated:
+          type: boolean
+        will_get_vaccinated:
+          type: boolean
+        current_employment:
+          type: boolean
+        may_contact_current_employer:
+          type: boolean
+        client_employment:
+          type: boolean
+        client_names:
+          type: string
+        prevent_servicing_clients:
+          type: boolean
+        r4_employee_referral:
+          type: boolean
+        r4_employee_referral_name:
+          type: string
+        reason_for_looking:
+          type: string
+        high_school_diploma:
+          type: boolean
+        college_degree:
+          type: boolean
+        highest_education_level:
+          type: string
+        certifications:
+          type: string
+        skills:
+          type: string
+        role:
+          type: string
+          $ref: '#/components/schemas/Roles'
+        heard_about_r4:
+          type: array
+          items:
+            type: string
+        reasons_no_contact:
+          type: string
+        authorize_verification:
+          type: boolean
+        signature_date:
+          type: string
+
+
+    WorkHistoryDto:
+      type: object
+      properties:
+        work_history_id:
+          type: string
+          format: uuid
+        employeeId:
+          type: string
+          format: uuid
+        company_name:
+          type: string
+        position:
+          type: string
+        start_date:
+          type: string
+          format: date
+        end_date:
+          type: string
+          format: date
+        industry:
+          type: string
+        duties:
+          type: string
+        employer_name:
+          type: string
+        manager_name:
+          type: string
+        phone:
+          type: string
+        reason_for_leaving:
+          type: string
+
+
+    EducationDto:
+      type: object
+      properties:
+        education_id:
+          type: string
+          format: uuid
+        employee_id:
+          type: string
+          format: uuid
+        university_name:
+          type: string
+        college_name:
+          type: string
+        degree_type:
+          type: string
+        advanced_degree_type:
+          type: string
+        major:
+          type: string
+        start_date:
+          type: string
+          format: date
+        end_date:
+          type: string
+          format: date
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+
+    UserDto:
+      type: object
+      description: Data transfer object for user, encapsulates user details.
+      properties:
+        id:
+          type: string
+          format: uuid
+        email:
+          type: string
+          format: email
+        firstName:
+          type: string
+        lastName: 
+          type: string
+        role:
+          type: string
+          $ref: '#/components/schemas/Roles'
+    Roles:
+      type: string
+      description: User roles within the system.
+      enum:
+        - HR
+        - EMPLOYEE
+
+    SignUpDto:
+      type: object
+      description: Data transfer object for signup
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+        role: 
+          $ref: '#/components/schemas/Roles'
+      required:
+        - firstName
+        - lastName
+        - email
+        - password
+        - role
+
+    LoginDto:
+      type: object
+      description: Data transfer object for login
+      properties:
+        usernameOrEmail:
+          type: string
+        password:
+          type: string
+      required:
+        - usernameOrEmail
+        - password
+

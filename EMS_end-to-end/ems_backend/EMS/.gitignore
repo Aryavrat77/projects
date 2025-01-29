@@ -1,0 +1,70 @@
+### General ###
+*.class
+*.log
+*.jar
+
+# Package files
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Ignore binary files
+*.bin
+
+# Mac system files
+.DS_Store
+
+# Node modules
+node_modules/
+
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+/build/
+
+
+### IDEs ###
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Visual Studio Code
+.vscode/
+
+
+# Binary directories
+bin/
+out/
+
+
+# Ignore other unnecessary files
+*.log
+*.sql
+*.md
+
+
+# Ignore IDE specific files
+.idea/
+*.iml

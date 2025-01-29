@@ -1,0 +1,36 @@
+# Base image with JDK and Gradle
+FROM openjdk:17-slim as builder
+
+# Set the working directory in the Docker image
+WORKDIR /app
+
+# Copy Gradle executable and wrapper files
+COPY gradlew .
+COPY gradle gradle
+COPY gradle.properties .
+COPY settings.gradle .
+COPY build.gradle .
+
+# Copy source code
+COPY src src
+
+# Grant permission to execute Gradle wrapper
+RUN chmod +x ./gradlew
+
+# Run Gradle clean and build
+RUN ./gradlew clean build --no-daemon
+
+# Runtime stage to create a smaller Docker image
+FROM openjdk:17-slim
+
+# Set the working directory in the Docker image
+WORKDIR /app
+
+# Copy only the built jar file from the builder stage
+COPY --from=builder /app/build/libs/*.jar ./app.jar
+
+# Expose the port the application uses
+EXPOSE 8080
+
+# Command to run the application
+CMD ["java", "-jar", "app.jar"]

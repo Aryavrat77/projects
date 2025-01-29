@@ -1,0 +1,24 @@
+package {{invokerPackage}};  // Replace with your actual package name
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import javax.ws.rs.ext.ContextResolver;
+import javax.ws.rs.ext.Provider;
+
+@Provider
+public class JacksonConfiguration implements ContextResolver<ObjectMapper> {
+    private final ObjectMapper objectMapper;
+
+    public JacksonConfiguration() {
+        objectMapper = new ObjectMapper();
+        // Register the Java Time Module to handle the JSR-310 java.time.* classes
+        objectMapper.registerModule(new JavaTimeModule());
+        // Configure the ObjectMapper to use ISO-8601 date and time formats by default
+        objectMapper.findAndRegisterModules();
+    }
+
+    @Override
+    public ObjectMapper getContext(Class<?> type) {
+        return objectMapper;
+    }
+}

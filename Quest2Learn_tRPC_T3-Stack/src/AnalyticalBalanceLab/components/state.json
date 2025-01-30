@@ -1,0 +1,186 @@
+{
+  "1": {
+    "stepTitle": "Lab Objectives",
+    "description": "Simply a starting page describing what we'll do in this lab",
+    "directions": "In this lab, you will learn how to use an analytical balance.",
+    "objectsInFocus": [
+      "analytical_balance"
+    ]
+  },
+  "2": {
+    "stepTitle": "Task",
+    "description": "Page showing powder sample and explaining how our task is to weigh around 0.5 g of that powder sample",
+    "directions": "Our task is to weight around 0.5g of the powder sample.",
+    "objectsInFocus": [
+      "powder_sample"
+    ]
+  },
+  "3": {
+    "stepTitle": "Apparatus and Chemical Selection",
+    "description": "Take out all the correct apparatus and chemicals neeed from the cabinet",
+    "directions": "First of all, take out all the apparatus needed for the lab from the cabinet.",
+    "objectsInFocus": [
+      "analytical_balance",
+      "spatula",
+      "beaker",
+      "weighing_paper",
+      "sample"
+    ],
+    "mistakes": [
+      {
+        "mistakeDescription": "Selected incorrect items from cabinet",
+        "context": "Equipment setup",
+        "correctAnswer": [
+          "analytical_balance",
+          "spatula",
+          "beaker",
+          "weighing_paper",
+          "sample"
+        ],
+        "category": "selection_mistake",
+        "count": 0,
+        "userAnswers": [
+          "[DYNAMICALLY UPDATE WITH USER'S SELECTIONS AND UPDATE COUNT EACH TIME USER CHOOSES INCORRECT OPTION]"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "stepTitle": "Open Side Window",
+    "description": "Animation showing us opening the side window of the analytical balance.",
+    "directions": "Next, open the side window of the analytical balance.",
+    "user_instructions": "Click on the balance's side door that is to your right to open it.",
+    "objectsInFocus": [
+      "analytical_balance"
+    ]
+  },
+  "5": {
+    "stepTitle": "Folding Weighing Paper Diagonally",
+    "description": "Animation showing us obtaining and folding a weighing paper in half.",
+    "directions": "Obtain a weighing paper and fold it diagonally.",
+    "user_instructions": "Click the weighing paper to fold it.",
+    "objectsInFocus": [
+      "weighing_paper"
+    ]
+  },
+  "6": {
+    "stepTitle": "Place Weighing Paper Onto Balance",
+    "description": "A balance with the side window open with a folder filter paper inside it.",
+    "directions": "Next, place the weighing paper onto the balance.",
+    "objectsInFocus": [
+      "analytical_balance",
+      "weighing_paper"
+    ]
+  },
+  "7": {
+    "stepTitle": "Add Powder Sample Onto Weighing Paper",
+    "description": "Add the appropriate amount of powder sample onto the weighing paper that is still on the balance.",
+    "directions": "Add around 0.5g of powder sample. Notice the balance reading as you do so.",
+    "user_instructions": "Use the buttons to add/remove powder sample.",
+    "objectsInFocus": [
+      "analytical_balance",
+      "weighing_paper",
+      "spatula",
+      "sample"
+    ],
+    "mistakes": [
+      {
+        "mistakeDescription": "Added incorrect amount of sample",
+        "context": "Analytical balance usage",
+        "correctAnswer": "0.5 grams",
+        "category": "input_mistake",
+        "count": 0,
+        "userAnswers": []
+      }
+    ]
+  },
+  "8": {
+    "stepTitle": "Close Side Window",
+    "description": "Animation showing us closing the side window of the analytical balance.",
+    "directions": "After adding powder, close the side window of the balance.",
+    "user_instructions": "Click the side door to close it.",
+    "objectsInFocus": [
+      "analytical_balance",
+      "weighing_paper"
+    ]
+  },
+  "9": {
+    "stepTitle": "Reading Weight of Powder Sample and Weighing Paper",
+    "description": "User anwers the stabilized reading onto the number pad.",
+    "directions": "What is the reading of the powder sample with weighing paper? Put your answer in the box below.",
+    "objectsInFocus": [
+      "analytical_balance",
+      "weighing_paper",
+      "number_pad"
+    ],
+    "mistakes": [
+      {
+        "mistakeDescription": "Read incorrect weight",
+        "context": "Number pad usage",
+        "correctAnswer": "0.5017 grams",
+        "category": "input_mistake",
+        "count": 0,
+        "userAnswers": []
+      }
+    ]
+  },
+  "10": {
+    "stepTitle": "Transfer Sample Powder Into Clean Beaker",
+    "description": "Animation showing us adding the sample powder from a diagonally folded filter paper into a beaker.",
+    "directions": "Transfer the sample powder into a clean beaker and place the paper back into the balance.",
+    "objectsInFocus": [
+      "analytical_balance",
+      "beaker",
+      "diagonal_weighing_paper"
+    ]
+  },
+  "11": {
+    "stepTitle": "Reading Weight of Weighing Paper",
+    "description": "User anwers the stabilized reading onto the number pad.",
+    "directions": "What is the reading of the weighing paper? Please input your answer in the box.",
+    "objectsInFocus": [
+      "analytical_balance",
+      "weighing_paper",
+      "number_pad"
+    ],
+    "mistakes": [
+      {
+        "mistakeDescription": "Read incorrect weight",
+        "context": "Number pad usage",
+        "correctAnswer": "0.0012 grams",
+        "category": "input_mistake",
+        "count": 0,
+        "userAnswers": []
+      }
+    ]
+  },
+  "12": {
+    "stepTitle": "Calculating Net Weight of Sample Powder",
+    "description": "User anwers the net weight of the sample powder obtained onto the number pad.",
+    "directions": "What is the net weight of the sample powder obtained?",
+    "objectsInFocus": [
+      "number_pad",
+      "beaker"
+    ],
+    "mistakes": [
+      {
+        "mistakeDescription": "Calculate incorrect weight",
+        "context": "Number pad usage",
+        "correctAnswer": "0.5005 grams",
+        "category": "input_mistake",
+        "count": 0,
+        "userAnswers": []
+      }
+    ]
+  },
+  "13": {
+    "stepTitle": "The End",
+    "description": "This is the ending step, indicating to the user that they have finished the lab.",
+    "directions": "Congratulations! You have finished the lab. We hope you enjoyed it!",
+    "objectsInFocus": [
+      "analytical_balance",
+      "beaker",
+      "diagonal_weighing_paper"
+    ]
+  }
+}

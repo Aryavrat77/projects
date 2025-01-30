@@ -1,0 +1,14 @@
+import { forwardRef } from "react";
+import { RBFlaskWithPourAnimation } from "../RBFlaskWithFillAnim";
+
+const Step1LabObjectives = forwardRef((props, ref) => {
+  return (
+    <group>
+      {/* The balance is positioned at the same coordinates as specified in the FourthStepComponent */}
+      <RBFlaskWithPourAnimation position={[0, 5, 0]} startAnimationDelay={99999} />
+      {/* Additional elements specific to the first step can be added here */}
+    </group>
+  );
+});
+
+export default Step1LabObjectives;

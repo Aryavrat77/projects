@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body, html
+{ 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #ADD8E6;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    /* font-family: Helvetica, Arial; */
+    /* font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif; */
+
+/*} */
+#root
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    /* font-family: Helvetica, Arial; */
+    /* font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif; */
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+}
+
+#__next {
+  min-height: 100%;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeMZs.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v19/wlptgwvFAVdoq2_F94zlCfv0bz1WCzsW_LM.woff) format('woff');
+}
+/* Add more @font-face rules for other Lexend font weights/styles as needed */
+
+
+/* Global styles */
+
+/* Add more global styles as needed */
+.dashboard {
+  display: flex;
+}
+
+.notebook-title {
+  border-bottom: 2px solid #D1D5DB;
+  padding-bottom: 10px;
+  border-radius: 1px;
+  text-align: center;
+}
+
+.completed-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #D1D5DB;
+  border-radius: 25px;
+  width: 100px;
+  height: 50px;
+  margin: auto;
+}
+
+.last-updated {
+  margin-top: 20px;
+}
+
+.sidebar-title {
+  color: #fff;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar-elements {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-elements > div:first-child {
+  margin-top: 10px;
+}
+
+.sidebar-elements div {
+  color: #fff;
+  margin-bottom: 14px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.sidebar-elements div:nth-child(6) {
+  margin-top: 150px;
+} 
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  border-right: 1px solid white;
+}
+
+.sidebar-button {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+.main-content {
+  flex-grow: 1;
+}

@@ -1,0 +1,137 @@
+{
+    "1": {
+        "stepTitle": "Lab Objectives",
+        "description": "Introduction to the lab and overview of objectives.",
+        "directions": "In this lab, you will learn how to use a rotary evaporator (rotavap).",
+        "objectsInFocus": ["rotovap"]
+    },
+    "2": {
+        "stepTitle": "Understanding the Task",
+        "description": "Explaining the goal of removing solvent from the product solution using the rotavap.",
+        "directions": "You have a purified organic product with solvent. Your aim is to remove the solvent by rotary evaporation.",
+        "objectsInFocus": ["product_solution", "rotovap"]
+    },
+    "3": {
+        "stepTitle": "Preparing for Evaporation",
+        "description": "Setting up the necessary apparatus for rotary evaporation.",
+        "directions": "First, take out all the apparatus needed for the lab from the cabinet.",
+        "objectsInFocus": ["rotovap", "round_bottomed_flask", "bump_trap", "keck_clips"]
+    },
+    "4": {
+        "stepTitle": "Flask Selection",
+        "description": "Choosing the suitable flask for the given volume of product solution.",
+        "directions": "Suppose you have around 40mL of product solution, which round-bottomed flask is the most suitable?",
+        "user_instructions": "Click on the flask that will best do the job.",
+        "objectsInFocus": ["round_bottomed_flask"]
+    },
+    "5": {
+        "stepTitle": "Transferring the Product",
+        "description": "Preparing to transfer the organic product into the selected round-bottomed flask.",
+        "directions": "Transfer the organic product into the chosen round-bottomed flask.",
+        "user_instructions": "Click the beaker to transfer it.",
+        "objectsInFocus": ["product_solution", "round_bottomed_flask"]
+    },
+    "6": {
+        "stepTitle": "Setting Up the Rotovap",
+        "description": "Preparing the rotary evaporator for the evaporation process.",
+        "directions": "Empty all the liquid in the solvent collection flask and then connect it back to the rotary evaporator.",
+        "user_instructions": "Click the solvent collection flask to empty it into the beaker.",
+        "objectsInFocus": ["rotovap", "solvent_collection_flask"]
+    },
+    "7": {
+        "stepTitle": "Activating the Water Bath",
+        "description": "Setting up the water bath for the evaporation process.",
+        "directions": "Turn on the hot water bath by pressing the power button and setting the temperature to around 40 Celsius.",
+        "user_instructions": "Click the power switch to turn it on.",
+        "objectsInFocus": ["rotovap", "hot_water_bath"]
+    },
+    "8": {
+        "stepTitle": "Starting the Condenser and Vacuum Pump",
+        "description": "Activating the condenser and the vacuum pump of the rotary evaporator.",
+        "directions": "Turn on the condenser and the vacuum pump.",
+        "user_instructions": "Click the buttons to turn them on.",
+        "objectsInFocus": ["rotovap", "condenser", "vacuum_pump"]
+    },
+    "9": {
+        "stepTitle": "Reducing Pressure",
+        "description": "Adjusting the rotovap to create the optimal evaporation conditions.",
+        "directions": "Close the stopcock of the condenser to further reduce pressure.",
+        "user_instructions": "Rotate 90 degrees towards you.",
+        "objectsInFocus": ["rotovap", "stopcock"]
+    },
+    "10": {
+        "stepTitle": "Raising the Rotovap Arm",
+        "description": "Adjusting the position of the rotary evaporator's arm for evaporation.",
+        "directions": "Raise the side arm of the rotary evaporator.",
+        "user_instructions": "Click the arm to raise it.",
+        "objectsInFocus": ["rotovap"]
+    },
+    "11": {
+        "stepTitle": "Securing the Flask",
+        "description": "Securing the product flask to the rotary evaporator for safe operation.",
+        "directions": "Secure the bump trap with a Keck clip. Then, connect the product flask to the bump trap, and secure it with a Keck clip.",
+        "objectsInFocus": ["rotovap", "bump_trap", "keck_clips", "product_flask"]
+    },
+    "12": {
+        "stepTitle": "Adjusting Rotovap Settings",
+        "description": "Setting the rotational speed for effective evaporation.",
+        "directions": "Turn on and adjust the rotation knob to start turning the rotovap at the desired speed.",
+        "user_instructions": "Press the power button to start the rotation.",
+        "objectsInFocus": ["rotovap"]
+    },
+    "13": {
+        "stepTitle": "Submerging the Flask",
+        "description": "Immersing the flask into the water bath for efficient evaporation.",
+        "directions": "Slowly submerge the flask into the hot water bath. If necessary, adjust the height of the round-bottomed flask afterwards to prevent bumping of liquid, so that there is moderate evaporation as shown.",
+        "user_instructions": "Click on the arm to bring it down and submerge the flask.",
+        "objectsInFocus": ["rotovap", "round_bottomed_flask"]
+    },
+    "14": {
+        "stepTitle": "Removing the Flask",
+        "description": "Taking the flask out of the water bath after evaporation.",
+        "directions": "After evaporation, raise the arm of the rotovap to remove the flask from the water bath.",
+        "user_instructions": "Click on the arm to raise it.",
+        "objectsInFocus": ["rotovap", "round_bottomed_flask"]
+    },
+    "15": {
+        "stepTitle": "Turning Off the Rotovap",
+        "description": "Shutting down the rotary evaporator after the evaporation process.",
+        "directions": "Turn off the rotation, then turn off the hot water bath.",
+        "user_instructions": "Press the rotation knob to zero and power off. Then repeat for the hot water bath.",
+        "objectsInFocus": ["rotovap", "hot_water_bath"]
+    },
+    "16": {
+        "stepTitle": "Releasing Vacuum",
+        "description": "Releasing the vacuum in the rotary evaporator system.",
+        "directions": "Release the vacuum by opening the stopcock.",
+        "user_instructions": "Click on the stopcock to open it.",
+        "objectsInFocus": ["rotovap", "stopcock"]
+    },
+    "17": {
+        "stepTitle": "Turning Off Condenser and Vacuum Pump",
+        "description": "Turning off additional components of the rotary evaporator.",
+        "directions": "Turn off the condenser and the vacuum pump.",
+        "user_instructions": "Click the power buttons to turn them off.",
+        "objectsInFocus": ["rotovap", "condenser", "vacuum_pump"]
+    },
+    "18": {
+        "stepTitle": "Detaching the Flask",
+        "description": "Removing the flask from the rotary evaporator setup.",
+        "directions": "Take off the keck clips. Then, remove the round-bottomed flask.",
+        "user_instructions": "Click on the keck clip to start removing the round-bottomed flask.",
+        "objectsInFocus": ["rotovap", "keck_clips", "round_bottomed_flask"]
+    },
+    "19": {
+        "stepTitle": "Removing the Bump Trap",
+        "description": "Detaching the bump trap from the rotary evaporator.",
+        "directions": "Next, remove the bump trap.",
+        "user_instructions": "Click on the keck clip to start removing it.",
+        "objectsInFocus": ["rotovap", "bump_trap", "keck_clips"]
+    },
+    "20": {
+        "stepTitle": "Lab Conclusion",
+        "description": "Concluding the lab and reviewing the results.",
+        "directions": "The organic product without solvent is obtained.",
+        "objectsInFocus": ["product_solution", "round_bottomed_flask"]
+    }
+}

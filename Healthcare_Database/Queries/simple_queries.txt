@@ -1,0 +1,562 @@
+mysql> SOURCE ~/Desktop/Databases/DBProject-Aryavrat_Winston/Queries/simple_queries.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++------------+------------+------------+---------------+--------+----------------------------------------------------------+-----------------+---------------------------------+-----------------------+---------------------+
+| patient_id | first_name | last_name  | date_of_birth | gender | address                                                  | phone           | email                           | insurance_provider_id | created_at          |
++------------+------------+------------+---------------+--------+----------------------------------------------------------+-----------------+---------------------------------+-----------------------+---------------------+
+|          1 | Elizabeth1 | Leonard    | 1970-07-30    | F      | 508 Roger Turnpike
+South Rhondaview, SC 37619            | +1-591-320-2631 | carrolljean@example.net         |                    66 | 2024-12-20 00:43:26 |
+|          2 | Jennifer   | Jones      | 2024-05-08    | M      | 3276 Matthew Highway
+Jonesburgh, LA 42446                | (679)897-2620   | ohood@example.org               |                    14 | 2024-12-20 00:43:26 |
+|          3 | Claudia    | Davidson   | 1994-09-24    | M      | 477 Michael Trail Suite 193
+Matthewville, MH 00577       | (599)782-2761   | jasonmedina@example.com         |                    91 | 2024-12-20 00:43:26 |
+|          4 | Nicole     | Estrada    | 1962-01-19    | M      | 52872 Shannon Light Apt. 996
+Shariport, CT 71758         | 6462630701      | davidzimmerman@example.org      |                     2 | 2024-12-20 00:43:26 |
+|          5 | James      | Casey      | 1933-06-19    | F      | 0904 Rodgers Road Suite 663
+East Monicamouth, KS 99684   | (367)938-0190x6 | brandon45@example.org           |                    35 | 2024-12-20 00:43:26 |
+|          6 | Ashley     | Brown      | 1982-09-22    | M      | 391 Hall Flats Suite 174
+North David, AZ 14460           | 977.616.7110x92 | kathryn05@example.com           |                     9 | 2024-12-20 00:43:26 |
+|          7 | John       | Parker     | 1929-09-19    | F      | 73042 Jose Radial
+Davidside, OH 69531                    | 2952798513      | tyler37@example.com             |                    21 | 2024-12-20 00:43:26 |
+|          8 | Melissa    | Jackson    | 1940-03-09    | M      | PSC 5188, Box 0004
+APO AP 70566                          | 6756864665      | timothy22@example.net           |                    59 | 2024-12-20 00:43:26 |
+|          9 | Samantha   | Carr       | 2001-05-09    | F      | 4861 Wagner Bypass Suite 573
+South Joseport, CT 21859    | (429)834-7854   | michaelmoore@example.net        |                    86 | 2024-12-20 00:43:26 |
+|         10 | Dale       | Phillips   | 1991-11-14    | M      | 830 Bell Loaf
+Staceytown, CA 37140                       | 322.504.3120x84 | robertmolina@example.com        |                    36 | 2024-12-20 00:43:26 |
+|         11 | Kevin      | Hull       | 2004-10-01    | F      | 98630 Yates Parkway Apt. 865
+South Maryborough, MP 15391 | 451-851-3455x77 | nicholasgreen@example.com       |                    38 | 2024-12-20 00:43:26 |
+|         12 | Jennifer   | Porter     | 2021-08-16    | F      | 01268 Jones Walks
+West Tylermouth, WI 82401              | 573-501-5004    | claytonbilly@example.com        |                    91 | 2024-12-20 00:43:26 |
+|         13 | Samantha   | Paul       | 1999-04-08    | M      | 206 Nancy Forest
+Harrisberg, MO 33504                    | 897-551-9633    | lhodge@example.org              |                    49 | 2024-12-20 00:43:26 |
+|         14 | James      | Orr        | 1928-10-02    | M      | USCGC Miller
+FPO AA 38638                                | 237-635-6241x85 | antonio51@example.org           |                    21 | 2024-12-20 00:43:26 |
+|         15 | Rachel     | Reeves     | 2010-06-09    | M      | 8816 Vincent Flat Suite 967
+South Ashley, NC 22419       | 866-474-4299    | hansenkaren@example.com         |                    44 | 2024-12-20 00:43:26 |
+|         16 | Jamie      | Kennedy    | 1950-10-18    | M      | 190 Michelle Squares Suite 397
+Hullfurt, PW 03484        | 8496739311      | mitchellbrittney@example.org    |                    60 | 2024-12-20 00:43:26 |
+|         17 | Andrew     | Russell    | 1944-10-21    | M      | 036 Angela Flats
+West Joelshire, CT 43172                | 782.458.9739x95 | anthonychen@example.net         |                    19 | 2024-12-20 00:43:26 |
+|         18 | Douglas    | Lewis      | 1962-09-02    | F      | 145 Joshua Valleys Suite 548
+Browntown, WY 14331         | 8148311174      | amandabray@example.org          |                    67 | 2024-12-20 00:43:26 |
+|         19 | Heather    | Rose       | 1929-05-19    | M      | 894 Hernandez Locks
+Port Victorshire, AS 13505           | +1-432-691-4329 | adamperez@example.net           |                    73 | 2024-12-20 00:43:26 |
+|         20 | Pamela     | Cohen      | 2020-12-24    | M      | 157 Riley Tunnel Suite 377
+Port Kimberly, AK 49309       | 543-811-6161    | morganlaura@example.net         |                    22 | 2024-12-20 00:43:26 |
+|         21 | Lori       | Brooks     | 1973-12-09    | F      | 629 Wong Locks
+Tiffanyland, GU 08603                     | 001-431-968-449 | mclaughlinchristian@example.com |                     6 | 2024-12-20 00:43:26 |
+|         22 | Katrina    | Vance      | 2012-04-30    | M      | USCGC Gonzales
+FPO AA 86610                              | 001-597-831-447 | angelagill@example.net          |                    32 | 2024-12-20 00:43:26 |
+|         23 | Jennifer   | Sanchez    | 1938-05-19    | M      | PSC 2966, Box 3124
+APO AA 98920                          | 358-556-0185    | lambrichard@example.com         |                    97 | 2024-12-20 00:43:26 |
+|         24 | Bernard    | Smith      | 1965-06-23    | M      | 249 Sharp Terrace
+Ericchester, MD 26460                  | 001-789-262-420 | jenniferbennett@example.com     |                    46 | 2024-12-20 00:43:26 |
+|         25 | Ruth       | Hamilton   | 1998-12-06    | F      | 78724 Mitchell Glens Suite 181
+Matthewshire, MI 81716    | 897.567.3647x46 | nguyenjoshua@example.net        |                    85 | 2024-12-20 00:43:26 |
+|         26 | Charles    | Vargas     | 2014-02-19    | F      | 1358 Grace Port
+New Denise, NJ 98234                     | 744-952-3002    | williamsmatthew@example.org     |                    54 | 2024-12-20 00:43:26 |
+|         27 | Allison    | White      | 1988-05-07    | F      | 017 Paul Trail Apt. 702
+Edwardfort, PR 79157             | 5504733870      | lshaffer@example.net            |                    79 | 2024-12-20 00:43:26 |
+|         28 | Samantha   | Barker     | 1975-12-15    | F      | 11654 Ellis Villages Apt. 136
+South Lisa, CA 21631       | 983.384.7888x14 | michaelterry@example.net        |                    31 | 2024-12-20 00:43:26 |
+|         29 | Daniel     | Walker     | 1935-03-27    | M      | 27365 Copeland Oval Suite 729
+Shaneview, HI 86110        | 001-596-253-269 | nhodge@example.net              |                    68 | 2024-12-20 00:43:26 |
+|         30 | Crystal    | Gamble     | 1973-10-09    | F      | 765 Max Mount
+Craigtown, PA 31692                        | 471.391.3123    | stephaniebrown@example.com      |                     7 | 2024-12-20 00:43:26 |
+|         31 | Tricia     | Klein      | 1976-10-01    | F      | 34528 Ryan Plains Suite 387
+West Melissa, WY 96492       | 929-514-5369x84 | barrmichael@example.net         |                    92 | 2024-12-20 00:43:26 |
+|         32 | Karen      | Jones      | 2022-07-27    | M      | 13959 Romero Mount Suite 508
+Whitefort, UT 05984         | 001-666-604-784 | dawn58@example.org              |                    89 | 2024-12-20 00:43:26 |
+|         33 | Krystal    | Rice       | 1929-07-16    | M      | 47115 Pacheco Port Apt. 748
+Theodoreshire, AZ 78389      | 001-421-373-348 | mckinneydonald@example.net      |                    13 | 2024-12-20 00:43:26 |
+|         34 | James      | Schultz    | 1953-11-17    | M      | 6563 Hamilton Mountain
+West Lucas, MN 03446              | 7827375891      | zjuarez@example.net             |                    61 | 2024-12-20 00:43:26 |
+|         35 | Nicholas   | Booker     | 2006-10-15    | M      | 545 Horn Mount
+North Tammytown, VI 00680                 | (910)221-5150   | xjarvis@example.net             |                    82 | 2024-12-20 00:43:26 |
+|         36 | Brittany   | Gonzalez   | 1981-12-19    | M      | Unit 6373 Box 4403
+DPO AA 97588                          | 292.934.5706    | ysanders@example.org            |                    12 | 2024-12-20 00:43:26 |
+|         37 | Alan       | Gamble     | 1926-12-28    | M      | 596 James Estate Suite 508
+Timothymouth, MI 98139        | 001-226-569-699 | adkinskevin@example.com         |                    75 | 2024-12-20 00:43:26 |
+|         38 | Amy        | Nolan      | 1955-02-25    | F      | 330 Adam Plains Apt. 777
+West Debbie, WI 48486           | 881.204.6283x21 | mccarthydarrell@example.com     |                    47 | 2024-12-20 00:43:26 |
+|         39 | Stacey     | Becker     | 2020-03-24    | M      | 123 Rodriguez Mountains
+South Jeremychester, MA 49761    | 001-726-940-706 | michaelchang@example.com        |                    36 | 2024-12-20 00:43:26 |
+|         40 | Mark       | Middleton  | 2020-09-09    | M      | 97185 Hicks Course Apt. 960
+Rodneystad, MD 83774         | 001-423-962-675 | jparker@example.org             |                    66 | 2024-12-20 00:43:26 |
+|         41 | Shirley    | Morgan     | 1959-09-04    | M      | USCGC Anderson
+FPO AP 57020                              | (846)522-5231x3 | debrayoung@example.com          |                    94 | 2024-12-20 00:43:26 |
+|         42 | Jasmin     | Jones      | 1910-08-20    | M      | 07336 Brian Club
+Lake Williamside, ND 28616              | 001-412-629-936 | millersamantha@example.com      |                    92 | 2024-12-20 00:43:26 |
+|         43 | Daniel     | Johnson    | 1993-10-14    | M      | 65247 Savannah Track
+Rebeccaberg, AS 24804               | 810-725-1149x96 | kristenwilliams@example.org     |                    72 | 2024-12-20 00:43:26 |
+|         44 | Robert     | Johnson    | 2013-11-08    | M      | 6335 David Common
+Martintown, CT 31269                   | 001-331-556-696 | charlotte61@example.net         |                    18 | 2024-12-20 00:43:26 |
+|         45 | Brittany   | Thomas     | 1932-08-22    | M      | 196 Miranda Drive
+Lake Diane, VT 15575                   | 774-221-9543    | deborahschmidt@example.net      |                    87 | 2024-12-20 00:43:26 |
+|         46 | Thomas     | Castillo   | 1939-05-20    | M      | 1658 Thomas Falls
+South Johnfurt, MI 87273               | +1-774-664-3576 | thomasashley@example.org        |                    61 | 2024-12-20 00:43:26 |
+|         47 | Andre      | Wood       | 1961-04-24    | M      | 132 Mclean Forge Apt. 457
+Robinchester, DE 59334         | +1-473-928-3037 | qmiller@example.org             |                    24 | 2024-12-20 00:43:26 |
+|         48 | James      | Long       | 2015-09-06    | M      | USCGC Taylor
+FPO AA 75161                                | 4269867592      | ricardo56@example.net           |                    89 | 2024-12-20 00:43:26 |
+|         49 | Kathy      | Wolf       | 1985-04-21    | F      | PSC 9525, Box 7783
+APO AA 99066                          | (942)257-2884x2 | david05@example.net             |                     5 | 2024-12-20 00:43:26 |
+|         50 | Diana      | Stevens    | 1968-04-20    | M      | 51284 Jessica Port Apt. 205
+Morenotown, WI 17027         | 241.504.6183    | vaughnteresa@example.org        |                    48 | 2024-12-20 00:43:26 |
+|         51 | Sarah      | Mack       | 1997-05-04    | M      | 93844 Benjamin Station
+Mckenziemouth, OR 52968           | 650.541.3730x29 | josephwagner@example.net        |                     1 | 2024-12-20 00:43:26 |
+|         52 | Evan       | Willis     | 1920-07-17    | M      | Unit 0242 Box 2243
+DPO AP 80968                          | +1-813-882-6839 | inewman@example.org             |                    13 | 2024-12-20 00:43:26 |
+|         53 | Yesenia    | Bright     | 1917-05-05    | F      | 1234 Strong Hills
+Danielmouth, NM 08728                  | 994.796.2320x10 | jermaine24@example.net          |                    39 | 2024-12-20 00:43:26 |
+|         54 | Jacob      | Scott      | 1962-10-23    | M      | 89407 Bryan Streets Apt. 859
+New Justin, VA 41560        | 314.899.4884    | fmitchell@example.com           |                    68 | 2024-12-20 00:43:26 |
+|         55 | Tina       | Davis      | 1985-11-23    | F      | 739 Sharp Trail Apt. 919
+East Tina, AK 26200             | 448-352-1721x70 | edwinhebert@example.org         |                    26 | 2024-12-20 00:43:26 |
+|         56 | Lauren     | Santiago   | 1917-03-12    | M      | 07121 Valerie Islands Suite 924
+Port Michael, TN 15628   | 001-532-947-436 | gary60@example.net              |                    42 | 2024-12-20 00:43:26 |
+|         57 | William    | West       | 1958-07-19    | M      | 3117 Rogers Springs Apt. 046
+Jacksonshire, MT 37427      | +1-933-549-0088 | dgreene@example.org             |                    61 | 2024-12-20 00:43:26 |
+|         58 | Thomas     | Garcia     | 1963-12-27    | F      | 1603 Gabrielle Rapid Suite 071
+West Katherine, PW 85020  | 001-852-293-748 | ginayork@example.net            |                    89 | 2024-12-20 00:43:26 |
+|         59 | Lawrence   | Parker     | 2021-03-13    | F      | 559 Lynn Landing
+New Jennifer, FL 60825                  | 594-254-2819    | madison53@example.org           |                    76 | 2024-12-20 00:43:26 |
+|         60 | Joseph     | Dennis     | 1967-04-13    | M      | 639 Burton Cape
+North Jamesville, TN 71738               | +1-717-912-3221 | kwilliams@example.net           |                    46 | 2024-12-20 00:43:26 |
+|         61 | Jennifer   | Roberts    | 1932-02-25    | M      | 35592 Dale Circle
+North Maria, MI 96133                  | 957-932-5865    | jamesramirez@example.com        |                    98 | 2024-12-20 00:43:26 |
+|         62 | Amy        | Haynes     | 2007-01-24    | M      | 548 Shawn Crest
+Aaronport, MS 70748                      | (807)794-6430x3 | shawn11@example.org             |                    34 | 2024-12-20 00:43:26 |
+|         63 | Rachel     | Knight     | 1974-08-22    | M      | 152 Mitchell Spur
+Loveside, CT 41592                     | 914.380.0825x58 | xdavis@example.org              |                     5 | 2024-12-20 00:43:26 |
+|         64 | Kathy      | Sullivan   | 1950-03-01    | M      | 228 Nancy Court
+West Amy, IA 71108                       | 683-952-6349x30 | michelle93@example.org          |                    59 | 2024-12-20 00:43:26 |
+|         65 | Amy        | Glover     | 1915-05-26    | M      | 0146 Adkins Port Suite 561
+Carlville, OH 83460           | 907-289-7644    | debbiehayden@example.net        |                    87 | 2024-12-20 00:43:26 |
+|         66 | Wayne      | Myers      | 1978-01-07    | F      | 925 Adrian Common Suite 109
+North Ryan, AK 82196         | 857-476-0795x89 | qkhan@example.org               |                   100 | 2024-12-20 00:43:26 |
+|         67 | Anthony    | Hernandez  | 1930-02-22    | M      | PSC 0319, Box 4315
+APO AA 52987                          | +1-685-358-1104 | rodriguezjustin@example.net     |                    69 | 2024-12-20 00:43:26 |
+|         68 | Jennifer   | Wilcox     | 1995-08-12    | F      | 031 Luke Plains
+Port Rachelchester, ID 13357             | 001-887-640-679 | thomasgarcia@example.net        |                    61 | 2024-12-20 00:43:26 |
+|         69 | Derek      | Roberts    | 1936-01-21    | F      | 1199 Benjamin Trace Apt. 932
+West Phyllis, MT 28148      | (658)798-9145   | michael26@example.net           |                     2 | 2024-12-20 00:43:26 |
+|         70 | Eric       | Roach      | 1911-09-25    | M      | 329 Brianna Fort Suite 026
+North Joshua, PR 75679        | +1-637-392-6048 | porterheather@example.org       |                    74 | 2024-12-20 00:43:26 |
+|         71 | Jennifer   | Holloway   | 1931-09-30    | F      | 56201 Wallace Ford Suite 177
+West Alison, RI 64293       | +1-626-901-5479 | kimberly39@example.com          |                    73 | 2024-12-20 00:43:26 |
+|         72 | Jonathan   | Smith      | 1976-03-15    | M      | 13177 Diana Hills
+North James, MO 41993                  | (475)801-1806   | todd22@example.org              |                    30 | 2024-12-20 00:43:26 |
+|         73 | Ann        | Simmons    | 1922-02-05    | M      | 544 Michael Ford Suite 251
+Zacharyberg, NC 76457         | 2984853740      | fbarry@example.com              |                    18 | 2024-12-20 00:43:26 |
+|         74 | John       | Brown      | 2004-09-12    | F      | 11406 Grant Tunnel
+Robertside, WA 42385                  | +1-302-686-2881 | juangray@example.com            |                    32 | 2024-12-20 00:43:26 |
+|         75 | Julia      | Armstrong  | 1943-02-23    | M      | 51532 Sarah Mount
+Floydport, NC 61359                    | 230-667-4689x40 | zwilliams@example.com           |                    10 | 2024-12-20 00:43:26 |
+|         76 | Heather    | Francis    | 1953-11-28    | F      | 363 William Route
+Lake James, VA 66852                   | 001-209-980-902 | davidwilliams@example.net       |                    82 | 2024-12-20 00:43:26 |
+|         77 | Travis     | Moyer      | 1975-08-15    | F      | 0543 Angela Lodge
+Port Craigtown, GU 75667               | (521)828-6748x1 | bjohnson@example.net            |                    57 | 2024-12-20 00:43:26 |
+|         78 | Devin      | Jones      | 1985-05-14    | M      | 550 Brian Glen Suite 677
+Lake Johnport, CA 54485         | 001-558-240-496 | ramosantonio@example.org        |                     1 | 2024-12-20 00:43:26 |
+|         79 | Larry      | Mcclain    | 1924-07-20    | M      | 013 Jill Parkway
+New Justin, NV 34006                    | (840)701-7984   | ortegaaustin@example.org        |                    11 | 2024-12-20 00:43:26 |
+|         80 | Julie      | Roberts    | 1953-10-15    | M      | 4306 James Turnpike
+Crystaltown, MD 48078                | 001-853-437-955 | awilliams@example.org           |                    13 | 2024-12-20 00:43:26 |
+|         81 | Kristin    | Marshall   | 1915-05-07    | F      | 2243 Grace Dale Apt. 225
+Lake Luistown, GA 28616         | 274-609-5350x08 | kbaker@example.net              |                    86 | 2024-12-20 00:43:26 |
+|         82 | William    | Singh      | 2020-03-02    | M      | 8050 Calvin Drives
+South Juliaport, GU 33487             | 001-513-374-328 | doyleshelby@example.org         |                    54 | 2024-12-20 00:43:26 |
+|         83 | Michael    | Fields     | 1956-07-28    | F      | 6510 Kirk Lodge
+East Jonathanburgh, MP 45690             | +1-856-779-1364 | anthony54@example.com           |                    65 | 2024-12-20 00:43:26 |
+|         84 | Wesley     | Hernandez  | 1928-01-17    | F      | USCGC Gregory
+FPO AP 29181                               | (956)299-2154x2 | ochoazachary@example.org        |                    24 | 2024-12-20 00:43:26 |
+|         85 | Robert     | Hendrix    | 2022-03-29    | M      | USNV Thornton
+FPO AA 36768                               | 226.642.7492x04 | christensenalex@example.org     |                    54 | 2024-12-20 00:43:26 |
+|         86 | Derek      | Olson      | 1991-04-29    | M      | 086 Bobby Keys
+Jeremymouth, IN 59386                     | +1-670-200-6829 | david81@example.com             |                    58 | 2024-12-20 00:43:26 |
+|         87 | Anthony    | Hale       | 1947-08-24    | F      | 598 Terry Walk
+Millershire, WA 30533                     | (826)884-3341x7 | smithsarah@example.org          |                    74 | 2024-12-20 00:43:26 |
+|         88 | Jesse      | Thompson   | 1995-08-27    | F      | 646 Thompson Walks Apt. 850
+South Jamie, OR 92810        | 234.747.6194    | rebeccamorrison@example.net     |                     9 | 2024-12-20 00:43:26 |
+|         89 | Haley      | Cabrera    | 2016-01-10    | F      | 172 Justin Club
+Jennifershire, GA 03131                  | (251)270-0984x0 | bernardfox@example.net          |                    66 | 2024-12-20 00:43:26 |
+|         90 | Kevin      | Delgado    | 1932-10-10    | F      | 90087 Carter Parks
+Carolberg, VI 05828                   | 2223188706      | mark25@example.net              |                    57 | 2024-12-20 00:43:26 |
+|         91 | Gabriel    | Harper     | 2010-03-08    | M      | 169 Cantrell Knolls
+Lake Elizabethport, NJ 61581         | +1-437-721-0623 | kevin48@example.org             |                     8 | 2024-12-20 00:43:26 |
+|         92 | Alexander  | Washington | 1950-04-22    | M      | 136 Stephens Stravenue Suite 086
+Robertbury, WY 97197    | 481-225-7814x06 | michaelfletcher@example.com     |                     2 | 2024-12-20 00:43:26 |
+|         93 | Trevor     | Hale       | 2014-01-25    | M      | 5711 John Village
+Millerville, MO 93468                  | 774.795.0877    | griffithpatricia@example.com    |                    95 | 2024-12-20 00:43:26 |
+|         94 | Kelsey     | Baldwin    | 1943-04-14    | F      | 7389 Miller Turnpike Suite 107
+Ivanshire, NC 07044       | 477-457-0794    | smithamanda@example.net         |                    11 | 2024-12-20 00:43:26 |
+|         95 | Timothy    | Flowers    | 1950-02-12    | M      | 047 Ortiz Corners
+Craigmouth, AL 51962                   | 8987822708      | sharon13@example.net            |                    11 | 2024-12-20 00:43:26 |
+|         96 | Jessica    | Bentley    | 1973-02-21    | F      | 80627 Wade Canyon
+Sheriton, LA 24863                     | +1-587-340-1815 | millerlarry@example.org         |                    81 | 2024-12-20 00:43:26 |
+|         97 | Kimberly   | Carlson    | 1970-07-24    | F      | 2088 Pitts Junctions Apt. 794
+Lake Amanda, CT 46878      | 8434907510      | pbrown@example.com              |                    44 | 2024-12-20 00:43:26 |
+|         98 | Kenneth    | Ross       | 1995-12-08    | F      | 08450 William Mews Suite 705
+East Roberthaven, NY 01120  | 665-936-8981x12 | alvaradoeric@example.com        |                    25 | 2024-12-20 00:43:26 |
+|         99 | Joseph     | King       | 1985-10-08    | F      | 296 Cory Streets
+Christopherton, RI 40639                | 330.487.0741    | vincentrussell@example.org      |                    31 | 2024-12-20 00:43:26 |
+|        100 | Amanda     | Vasquez    | 1971-12-29    | F      | 978 Wright Lake
+New Annatown, IA 49886                   | 9182696293      | leonardsamantha@example.com     |                     5 | 2024-12-20 00:43:26 |
++------------+------------+------------+---------------+--------+----------------------------------------------------------+-----------------+---------------------------------+-----------------------+---------------------+
+100 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++--------------------+
+| total_appointments |
++--------------------+
+|                100 |
++--------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++------------+------------+
+| first_name | last_name  |
++------------+------------+
+| Jennifer   | Jones      |
+| Claudia    | Davidson   |
+| Nicole     | Estrada    |
+| Ashley     | Brown      |
+| Melissa    | Jackson    |
+| Dale       | Phillips   |
+| Samantha   | Paul       |
+| James      | Orr        |
+| Rachel     | Reeves     |
+| Jamie      | Kennedy    |
+| Andrew     | Russell    |
+| Heather    | Rose       |
+| Pamela     | Cohen      |
+| Katrina    | Vance      |
+| Jennifer   | Sanchez    |
+| Bernard    | Smith      |
+| Daniel     | Walker     |
+| Karen      | Jones      |
+| Krystal    | Rice       |
+| James      | Schultz    |
+| Nicholas   | Booker     |
+| Brittany   | Gonzalez   |
+| Alan       | Gamble     |
+| Stacey     | Becker     |
+| Mark       | Middleton  |
+| Shirley    | Morgan     |
+| Jasmin     | Jones      |
+| Daniel     | Johnson    |
+| Robert     | Johnson    |
+| Brittany   | Thomas     |
+| Thomas     | Castillo   |
+| Andre      | Wood       |
+| James      | Long       |
+| Diana      | Stevens    |
+| Sarah      | Mack       |
+| Evan       | Willis     |
+| Jacob      | Scott      |
+| Lauren     | Santiago   |
+| William    | West       |
+| Joseph     | Dennis     |
+| Jennifer   | Roberts    |
+| Amy        | Haynes     |
+| Rachel     | Knight     |
+| Kathy      | Sullivan   |
+| Amy        | Glover     |
+| Anthony    | Hernandez  |
+| Eric       | Roach      |
+| Jonathan   | Smith      |
+| Ann        | Simmons    |
+| Julia      | Armstrong  |
+| Devin      | Jones      |
+| Larry      | Mcclain    |
+| Julie      | Roberts    |
+| William    | Singh      |
+| Robert     | Hendrix    |
+| Derek      | Olson      |
+| Gabriel    | Harper     |
+| Alexander  | Washington |
+| Trevor     | Hale       |
+| Timothy    | Flowers    |
++------------+------------+
+60 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++-----------------------------------+
+| name                              |
++-----------------------------------+
+| Engineer, civil (consulting)      |
+| Chief Operating Officer           |
+| Garment/textile technologist      |
+| Neurosurgeon                      |
+| Civil Service fast streamer       |
+| Planning and development surveyor |
+| Herbalist                         |
+| Lexicographer                     |
+| Research scientist (medical)      |
+| Ship broker                       |
++-----------------------------------+
+10 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++----------------+------------+----------+---------------------+-----------+--------------------------------------------------+---------------------+
+| appointment_id | patient_id | staff_id | appointment_date    | status    | reason                                           | created_at          |
++----------------+------------+----------+---------------------+-----------+--------------------------------------------------+---------------------+
+|             18 |         81 |       19 | 2024-12-19 21:08:49 | Scheduled | General wind live new three although many.       | 2024-12-20 00:43:26 |
+|             21 |         37 |       39 | 2024-11-28 01:05:39 | No-Show   | Industry nature executive heavy.                 | 2024-12-20 00:43:26 |
+|             57 |         63 |       40 | 2024-12-08 19:57:58 | Scheduled | Both start indeed city.                          | 2024-12-20 00:43:26 |
+|             63 |         84 |       22 | 2024-11-27 03:00:35 | No-Show   | Your risk director place effort option somebody. | 2024-12-20 00:43:26 |
+|             65 |         14 |       80 | 2024-12-04 05:46:56 | Scheduled | Get value party those.                           | 2024-12-20 00:43:26 |
+|             85 |         51 |        1 | 2024-12-03 02:39:06 | Completed | Senior upon manager strong draw yet.             | 2024-12-20 00:43:26 |
++----------------+------------+----------+---------------------+-----------+--------------------------------------------------+---------------------+
+6 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++------------+------------+
+| first_name | last_name  |
++------------+------------+
+| Elizabeth1 | Leonard    |
+| Jennifer   | Jones      |
+| Claudia    | Davidson   |
+| Nicole     | Estrada    |
+| James      | Casey      |
+| Ashley     | Brown      |
+| John       | Parker     |
+| Melissa    | Jackson    |
+| Samantha   | Carr       |
+| Dale       | Phillips   |
+| Kevin      | Hull       |
+| Jennifer   | Porter     |
+| Samantha   | Paul       |
+| James      | Orr        |
+| Rachel     | Reeves     |
+| Jamie      | Kennedy    |
+| Andrew     | Russell    |
+| Douglas    | Lewis      |
+| Heather    | Rose       |
+| Pamela     | Cohen      |
+| Lori       | Brooks     |
+| Katrina    | Vance      |
+| Jennifer   | Sanchez    |
+| Bernard    | Smith      |
+| Ruth       | Hamilton   |
+| Charles    | Vargas     |
+| Allison    | White      |
+| Samantha   | Barker     |
+| Daniel     | Walker     |
+| Crystal    | Gamble     |
+| Tricia     | Klein      |
+| Karen      | Jones      |
+| Krystal    | Rice       |
+| James      | Schultz    |
+| Nicholas   | Booker     |
+| Brittany   | Gonzalez   |
+| Alan       | Gamble     |
+| Amy        | Nolan      |
+| Stacey     | Becker     |
+| Mark       | Middleton  |
+| Shirley    | Morgan     |
+| Jasmin     | Jones      |
+| Daniel     | Johnson    |
+| Robert     | Johnson    |
+| Brittany   | Thomas     |
+| Thomas     | Castillo   |
+| Andre      | Wood       |
+| James      | Long       |
+| Kathy      | Wolf       |
+| Diana      | Stevens    |
+| Sarah      | Mack       |
+| Evan       | Willis     |
+| Yesenia    | Bright     |
+| Jacob      | Scott      |
+| Tina       | Davis      |
+| Lauren     | Santiago   |
+| William    | West       |
+| Thomas     | Garcia     |
+| Lawrence   | Parker     |
+| Joseph     | Dennis     |
+| Jennifer   | Roberts    |
+| Amy        | Haynes     |
+| Rachel     | Knight     |
+| Kathy      | Sullivan   |
+| Amy        | Glover     |
+| Wayne      | Myers      |
+| Anthony    | Hernandez  |
+| Jennifer   | Wilcox     |
+| Derek      | Roberts    |
+| Eric       | Roach      |
+| Jennifer   | Holloway   |
+| Jonathan   | Smith      |
+| Ann        | Simmons    |
+| John       | Brown      |
+| Julia      | Armstrong  |
+| Heather    | Francis    |
+| Travis     | Moyer      |
+| Devin      | Jones      |
+| Larry      | Mcclain    |
+| Julie      | Roberts    |
+| Kristin    | Marshall   |
+| William    | Singh      |
+| Michael    | Fields     |
+| Wesley     | Hernandez  |
+| Robert     | Hendrix    |
+| Derek      | Olson      |
+| Anthony    | Hale       |
+| Jesse      | Thompson   |
+| Haley      | Cabrera    |
+| Kevin      | Delgado    |
+| Gabriel    | Harper     |
+| Alexander  | Washington |
+| Trevor     | Hale       |
+| Kelsey     | Baldwin    |
+| Timothy    | Flowers    |
+| Jessica    | Bentley    |
+| Kimberly   | Carlson    |
+| Kenneth    | Ross       |
+| Joseph     | King       |
+| Amanda     | Vasquez    |
++------------+------------+
+100 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++---------------+
+| total_revenue |
++---------------+
+|      53239.14 |
++---------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++-------------+------------+-----------------------------------+
+| first_name  | last_name  | department                        |
++-------------+------------+-----------------------------------+
+| Christopher | Bass       | Engineer, civil (consulting)      |
+| Joseph      | Buchanan   | Engineer, civil (consulting)      |
+| Michael     | Ortega     | Engineer, civil (consulting)      |
+| Howard      | Reyes      | Engineer, civil (consulting)      |
+| Justin      | Wallace    | Engineer, civil (consulting)      |
+| Jennifer    | Mclean     | Engineer, civil (consulting)      |
+| Shannon     | Watson     | Engineer, civil (consulting)      |
+| David       | Brock      | Chief Operating Officer           |
+| Amy         | Burgess    | Chief Operating Officer           |
+| Patrick     | Sloan      | Chief Operating Officer           |
+| Eric        | Swanson    | Chief Operating Officer           |
+| Todd        | Atkinson   | Chief Operating Officer           |
+| Jason       | Rice       | Chief Operating Officer           |
+| Steven      | Patrick    | Chief Operating Officer           |
+| Bryan       | Lawrence   | Chief Operating Officer           |
+| Richard     | Cooper     | Chief Operating Officer           |
+| Sara        | Parker     | Chief Operating Officer           |
+| Sheila      | Mann       | Garment/textile technologist      |
+| Courtney    | Evans      | Garment/textile technologist      |
+| Kenneth     | Tapia      | Garment/textile technologist      |
+| Andrew      | Williams   | Garment/textile technologist      |
+| Dustin      | Myers      | Garment/textile technologist      |
+| Amy         | Cruz       | Garment/textile technologist      |
+| Eric        | Hutchinson | Garment/textile technologist      |
+| Edwin       | Ellis      | Garment/textile technologist      |
+| Sherry      | Barber     | Garment/textile technologist      |
+| Terri       | Welch      | Neurosurgeon                      |
+| Christopher | Smith      | Neurosurgeon                      |
+| Jamie       | Morales    | Neurosurgeon                      |
+| Andrew      | Harris     | Neurosurgeon                      |
+| Omar        | Lara       | Neurosurgeon                      |
+| Connie      | Hernandez  | Neurosurgeon                      |
+| Michael     | Diaz       | Neurosurgeon                      |
+| Julia       | Pierce     | Civil Service fast streamer       |
+| Donna       | Patrick    | Civil Service fast streamer       |
+| Erin        | Adkins     | Civil Service fast streamer       |
+| Christopher | Williams   | Civil Service fast streamer       |
+| Jonathan    | Cochran    | Civil Service fast streamer       |
+| Larry       | Rich       | Civil Service fast streamer       |
+| Debbie      | Pitts      | Civil Service fast streamer       |
+| James       | Harris     | Civil Service fast streamer       |
+| Chad        | Moran      | Civil Service fast streamer       |
+| Kim         | Green      | Civil Service fast streamer       |
+| Ricky       | Peck       | Civil Service fast streamer       |
+| Priscilla   | Murphy     | Civil Service fast streamer       |
+| James       | Lambert    | Planning and development surveyor |
+| Hailey      | Walker     | Planning and development surveyor |
+| Jeanette    | Santana    | Planning and development surveyor |
+| Nicholas    | Jones      | Planning and development surveyor |
+| Frank       | Reyes      | Planning and development surveyor |
+| Jeremiah    | Hurley     | Planning and development surveyor |
+| Julie       | Preston    | Planning and development surveyor |
+| Vincent     | Barker     | Planning and development surveyor |
+| Sara        | Le         | Planning and development surveyor |
+| Jonathan    | Jenkins    | Planning and development surveyor |
+| John        | Meyer      | Herbalist                         |
+| Tiffany     | Randall    | Herbalist                         |
+| Jessica     | George     | Herbalist                         |
+| Adam        | Gutierrez  | Herbalist                         |
+| Todd        | Burton     | Herbalist                         |
+| John        | Ward       | Herbalist                         |
+| Karen       | Montoya    | Herbalist                         |
+| Jordan      | Hall       | Herbalist                         |
+| Sean        | Anderson   | Lexicographer                     |
+| Nancy       | Frazier    | Lexicographer                     |
+| Michelle    | Phillips   | Lexicographer                     |
+| Yvonne      | Cook       | Lexicographer                     |
+| Mark        | Schultz    | Lexicographer                     |
+| Terri       | Banks      | Lexicographer                     |
+| Rhonda      | Morse      | Lexicographer                     |
+| Breanna     | Henry      | Lexicographer                     |
+| Jose        | Howard     | Lexicographer                     |
+| Bonnie      | Thomas     | Lexicographer                     |
+| Amy         | Collier    | Lexicographer                     |
+| Stanley     | Wong       | Lexicographer                     |
+| Nicholas    | Reeves     | Lexicographer                     |
+| Timothy     | Stewart    | Lexicographer                     |
+| Erin        | George     | Lexicographer                     |
+| Jennifer    | Bailey     | Research scientist (medical)      |
+| Alexandria  | Daniel     | Research scientist (medical)      |
+| Marisa      | Harris     | Research scientist (medical)      |
+| Robert      | Garcia     | Research scientist (medical)      |
+| Amy         | Ramsey     | Research scientist (medical)      |
+| Steve       | Watkins    | Research scientist (medical)      |
+| Heather     | Smith      | Research scientist (medical)      |
+| Nancy       | Shepherd   | Research scientist (medical)      |
+| Sierra      | Thomas     | Research scientist (medical)      |
+| Julie       | Roman      | Research scientist (medical)      |
+| Christopher | Rodriguez  | Research scientist (medical)      |
+| Robert      | Gutierrez  | Ship broker                       |
+| Michelle    | Morton     | Ship broker                       |
+| Christopher | Torres     | Ship broker                       |
+| William     | Rivera     | Ship broker                       |
+| Paul        | Fields     | Ship broker                       |
+| Steven      | Garcia     | Ship broker                       |
+| Jodi        | Brown      | Ship broker                       |
+| Ryan        | Johnson    | Ship broker                       |
+| Steven      | Bowman     | Ship broker                       |
+| Joshua      | Frye       | Ship broker                       |
+| Shannon     | Walker     | Ship broker                       |
++-------------+------------+-----------------------------------+
+100 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Empty set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++----------------------+-------+
+| status               | count |
++----------------------+-------+
+| Pending              |    17 |
+| Paid                 |    25 |
+| Insurance-Processing |    26 |
+| Overdue              |    32 |
++----------------------+-------+
+4 rows in set (0.00 sec)
+
+mysql> notee;

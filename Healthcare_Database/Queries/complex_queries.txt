@@ -1,0 +1,884 @@
+mysql> SOURCE ~/Desktop/Databases/DBProject-Aryavrat_Winston/Queries/complex_queries.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++------------+------------+-----------+--------------+
+| patient_id | first_name | last_name | total_visits |
++------------+------------+-----------+--------------+
+|         43 | Daniel     | Johnson   |            4 |
+|         37 | Alan       | Gamble    |            3 |
+|         33 | Krystal    | Rice      |            3 |
+|         68 | Jennifer   | Wilcox    |            3 |
+|         78 | Devin      | Jones     |            3 |
++------------+------------+-----------+--------------+
+5 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++---------------+---------------+
+| department_id | total_revenue |
++---------------+---------------+
+|             6 |       8865.73 |
+|             5 |       3272.77 |
+|            10 |       3003.86 |
+|             9 |       8528.62 |
+|             7 |       3055.37 |
+|             2 |       5068.87 |
+|             8 |      11949.04 |
+|             1 |       3254.30 |
+|             4 |        580.70 |
+|             3 |       5659.88 |
++---------------+---------------+
+10 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++----------+--------------------+
+| staff_id | total_appointments |
++----------+--------------------+
+|       48 |                  4 |
+|       42 |                  4 |
+|       22 |                  4 |
+|       99 |                  3 |
+|        3 |                  3 |
+|       80 |                  3 |
+|       53 |                  3 |
+|       39 |                  3 |
+|       35 |                  3 |
+|       33 |                  3 |
+|       19 |                  3 |
+|      100 |                  2 |
+|       20 |                  2 |
+|       14 |                  2 |
+|       45 |                  2 |
+|       26 |                  2 |
+|       88 |                  2 |
+|       31 |                  2 |
+|       82 |                  2 |
+|       12 |                  2 |
+|       36 |                  2 |
+|       79 |                  2 |
+|       78 |                  2 |
+|       41 |                  2 |
+|        7 |                  2 |
+|       43 |                  2 |
+|       74 |                  2 |
+|       73 |                  2 |
+|       69 |                  2 |
+|       68 |                  2 |
+|       58 |                  2 |
+|       54 |                  2 |
+|        5 |                  1 |
+|       49 |                  1 |
+|       64 |                  1 |
+|        6 |                  1 |
+|       47 |                  1 |
+|       18 |                  1 |
+|       44 |                  1 |
+|       75 |                  1 |
+|       76 |                  1 |
+|       40 |                  1 |
+|       11 |                  1 |
+|        4 |                  1 |
+|       81 |                  1 |
+|       13 |                  1 |
+|       85 |                  1 |
+|       87 |                  1 |
+|       29 |                  1 |
+|       92 |                  1 |
+|       94 |                  1 |
+|       97 |                  1 |
+|       25 |                  1 |
+|        1 |                  1 |
++----------+--------------------+
+54 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++---------------+------------+
+| department_id | avg_cost   |
++---------------+------------+
+|             1 | 481.670000 |
+|             2 | 651.215714 |
+|             3 | 390.019091 |
+|             4 | 439.849000 |
+|             5 | 679.586923 |
+|             6 | 574.778571 |
+|             7 | 557.376429 |
+|             8 | 347.515000 |
+|             9 | 565.480769 |
+|            10 | 482.655000 |
++---------------+------------+
+10 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++---------+------------+--------+------------+----------------------+
+| bill_id | patient_id | amount | due_date   | status               |
++---------+------------+--------+------------+----------------------+
+|       1 |         69 | 922.29 | 2024-08-02 | Pending              |
+|       4 |         82 | 729.53 | 2024-08-31 | Insurance-Processing |
+|       6 |         73 | 613.34 | 2024-05-23 | Insurance-Processing |
+|       9 |         32 | 898.76 | 2024-09-08 | Pending              |
+|      10 |         90 | 845.22 | 2024-01-05 | Pending              |
+|      13 |         99 | 158.40 | 2024-04-26 | Overdue              |
+|      14 |         42 | 677.83 | 2024-06-02 | Overdue              |
+|      15 |          4 | 355.79 | 2024-02-01 | Insurance-Processing |
+|      16 |         13 | 418.66 | 2024-04-24 | Overdue              |
+|      17 |         97 | 580.70 | 2024-12-06 | Pending              |
+|      19 |         32 | 749.50 | 2024-12-02 | Overdue              |
+|      20 |         23 | 638.96 | 2024-01-07 | Insurance-Processing |
+|      21 |         30 | 342.12 | 2024-08-15 | Pending              |
+|      23 |         72 | 877.84 | 2024-02-14 | Overdue              |
+|      24 |         22 | 831.50 | 2024-03-09 | Pending              |
+|      26 |         45 | 606.90 | 2024-08-07 | Pending              |
+|      27 |        100 | 675.92 | 2024-09-16 | Overdue              |
+|      28 |         15 | 201.92 | 2024-05-17 | Insurance-Processing |
+|      29 |         58 | 470.99 | 2024-01-02 | Overdue              |
+|      30 |         96 | 154.12 | 2024-05-13 | Overdue              |
+|      31 |         56 | 428.92 | 2024-11-15 | Insurance-Processing |
+|      35 |         43 | 355.50 | 2024-05-09 | Overdue              |
+|      36 |         74 | 886.08 | 2024-09-08 | Overdue              |
+|      37 |         52 | 382.79 | 2024-07-08 | Pending              |
+|      38 |         77 | 534.36 | 2024-08-13 | Overdue              |
+|      39 |         39 | 832.96 | 2024-12-12 | Overdue              |
+|      40 |         48 | 910.07 | 2024-02-17 | Overdue              |
+|      42 |         88 | 830.34 | 2024-07-21 | Insurance-Processing |
+|      43 |          6 | 217.52 | 2024-07-09 | Overdue              |
+|      44 |         69 | 350.79 | 2024-04-14 | Insurance-Processing |
+|      45 |         68 | 446.84 | 2024-10-09 | Insurance-Processing |
+|      46 |         89 | 328.68 | 2024-05-15 | Insurance-Processing |
+|      47 |         57 | 825.88 | 2024-01-10 | Pending              |
+|      49 |         43 | 168.71 | 2024-01-26 | Overdue              |
+|      50 |         14 | 346.23 | 2024-09-18 | Overdue              |
+|      52 |         45 | 614.06 | 2024-06-14 | Pending              |
+|      53 |         66 | 737.61 | 2024-09-11 | Overdue              |
+|      54 |         80 | 868.42 | 2024-01-14 | Insurance-Processing |
+|      55 |         94 | 513.71 | 2024-06-13 | Overdue              |
+|      56 |         78 | 442.30 | 2024-09-20 | Overdue              |
+|      57 |         71 | 553.61 | 2024-04-23 | Pending              |
+|      58 |         43 | 193.49 | 2024-05-19 | Pending              |
+|      59 |         80 | 418.81 | 2024-06-25 | Insurance-Processing |
+|      60 |         97 | 154.31 | 2024-12-01 | Insurance-Processing |
+|      61 |         27 | 808.38 | 2024-01-05 | Overdue              |
+|      62 |         39 | 549.37 | 2024-05-07 | Overdue              |
+|      63 |         83 | 147.60 | 2024-08-16 | Pending              |
+|      66 |          2 | 616.56 | 2024-02-06 | Pending              |
+|      67 |         47 | 225.81 | 2024-02-09 | Insurance-Processing |
+|      68 |         49 | 581.90 | 2024-06-07 | Insurance-Processing |
+|      69 |         51 | 722.82 | 2024-05-20 | Overdue              |
+|      70 |         19 | 170.55 | 2024-01-21 | Overdue              |
+|      71 |         89 | 570.89 | 2024-02-01 | Insurance-Processing |
+|      72 |         26 | 237.90 | 2024-07-10 | Overdue              |
+|      76 |         15 | 885.09 | 2024-12-19 | Pending              |
+|      77 |         42 | 173.33 | 2024-10-23 | Overdue              |
+|      78 |         87 | 315.83 | 2024-02-08 | Insurance-Processing |
+|      80 |         78 | 747.09 | 2024-12-11 | Overdue              |
+|      81 |         67 | 710.72 | 2024-08-30 | Overdue              |
+|      82 |         47 | 866.70 | 2024-05-21 | Insurance-Processing |
+|      84 |         49 | 949.60 | 2024-01-28 | Pending              |
+|      85 |         40 | 740.57 | 2024-08-15 | Insurance-Processing |
+|      86 |         13 | 194.84 | 2024-01-17 | Overdue              |
+|      87 |          8 | 355.76 | 2024-09-03 | Overdue              |
+|      88 |         54 | 855.17 | 2024-06-10 | Overdue              |
+|      90 |         67 | 390.67 | 2024-10-27 | Overdue              |
+|      91 |         82 | 145.23 | 2024-03-27 | Pending              |
+|      92 |          4 | 669.38 | 2024-06-05 | Insurance-Processing |
+|      93 |          1 | 429.98 | 2024-11-14 | Overdue              |
+|      94 |         37 | 996.31 | 2024-04-14 | Insurance-Processing |
+|      95 |         35 | 774.34 | 2024-08-28 | Insurance-Processing |
+|      97 |         32 | 834.41 | 2024-08-20 | Insurance-Processing |
+|      98 |          9 | 288.49 | 2024-08-20 | Insurance-Processing |
+|      99 |         39 | 821.31 | 2024-10-28 | Insurance-Processing |
+|     100 |         12 | 119.49 | 2024-03-24 | Insurance-Processing |
++---------+------------+--------+------------+----------------------+
+75 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++------------+------------+-----------+---------------------+
+| patient_id | first_name | last_name | outstanding_balance |
++------------+------------+-----------+---------------------+
+|         69 | Derek      | Roberts   |             1273.08 |
+|         82 | William    | Singh     |              874.76 |
+|         73 | Ann        | Simmons   |              613.34 |
+|         32 | Karen      | Jones     |             2482.67 |
+|         90 | Kevin      | Delgado   |              845.22 |
+|         99 | Joseph     | King      |              158.40 |
+|         42 | Jasmin     | Jones     |              851.16 |
+|          4 | Nicole     | Estrada   |             1025.17 |
+|         13 | Samantha   | Paul      |              613.50 |
+|         97 | Kimberly   | Carlson   |              735.01 |
+|         23 | Jennifer   | Sanchez   |              638.96 |
+|         30 | Crystal    | Gamble    |              342.12 |
+|         72 | Jonathan   | Smith     |              877.84 |
+|         22 | Katrina    | Vance     |              831.50 |
+|         45 | Brittany   | Thomas    |             1220.96 |
+|        100 | Amanda     | Vasquez   |              675.92 |
+|         15 | Rachel     | Reeves    |             1087.01 |
+|         58 | Thomas     | Garcia    |              470.99 |
+|         96 | Jessica    | Bentley   |              154.12 |
+|         56 | Lauren     | Santiago  |              428.92 |
+|         43 | Daniel     | Johnson   |              717.70 |
+|         74 | John       | Brown     |              886.08 |
+|         52 | Evan       | Willis    |              382.79 |
+|         77 | Travis     | Moyer     |              534.36 |
+|         39 | Stacey     | Becker    |             2203.64 |
+|         48 | James      | Long      |              910.07 |
+|         88 | Jesse      | Thompson  |              830.34 |
+|          6 | Ashley     | Brown     |              217.52 |
+|         68 | Jennifer   | Wilcox    |              446.84 |
+|         89 | Haley      | Cabrera   |              899.57 |
+|         57 | William    | West      |              825.88 |
+|         14 | James      | Orr       |              346.23 |
+|         66 | Wayne      | Myers     |              737.61 |
+|         80 | Julie      | Roberts   |             1287.23 |
+|         94 | Kelsey     | Baldwin   |              513.71 |
+|         78 | Devin      | Jones     |             1189.39 |
+|         71 | Jennifer   | Holloway  |              553.61 |
+|         27 | Allison    | White     |              808.38 |
+|         83 | Michael    | Fields    |              147.60 |
+|          2 | Jennifer   | Jones     |              616.56 |
+|         47 | Andre      | Wood      |             1092.51 |
+|         49 | Kathy      | Wolf      |             1531.50 |
+|         51 | Sarah      | Mack      |              722.82 |
+|         19 | Heather    | Rose      |              170.55 |
+|         26 | Charles    | Vargas    |              237.90 |
+|         87 | Anthony    | Hale      |              315.83 |
+|         67 | Anthony    | Hernandez |             1101.39 |
+|         40 | Mark       | Middleton |              740.57 |
+|          8 | Melissa    | Jackson   |              355.76 |
+|         54 | Jacob      | Scott     |              855.17 |
+|          1 | Elizabeth1 | Leonard   |              429.98 |
+|         37 | Alan       | Gamble    |              996.31 |
+|         35 | Nicholas   | Booker    |              774.34 |
+|          9 | Samantha   | Carr      |              288.49 |
+|         12 | Jennifer   | Porter    |              119.49 |
++------------+------------+-----------+---------------------+
+55 rows in set (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++---------------------------------------------------+------------+
+| diagnosis                                         | occurrence |
++---------------------------------------------------+------------+
+| During must have effort effort.                   |          1 |
+| Experience wish want ten boy majority.            |          1 |
+| Power huge record cost be rather gas.             |          1 |
+| Realize set interest church.                      |          1 |
+| Dream image treatment.                            |          1 |
+| Human red wide protect.                           |          1 |
+| Air produce line person decision same laugh site. |          1 |
+| Few hot establish.                                |          1 |
+| Human eight and west media under practice art.    |          1 |
+| Cost true daughter appear eat out left.           |          1 |
++---------------------------------------------------+------------+
+10 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Empty set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++-------+---------------+
+| month | total_revenue |
++-------+---------------+
+|     4 |       9263.83 |
+|    11 |       6021.12 |
+|     2 |        855.20 |
+|     9 |       4800.90 |
+|     8 |       4708.95 |
+|     1 |       2750.92 |
+|    10 |       5380.82 |
+|     6 |       4104.03 |
+|     5 |       4694.28 |
+|     7 |       4504.20 |
+|    12 |       3205.44 |
+|     3 |       2949.45 |
++-------+---------------+
+12 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Empty set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++------------+---------+
+| patient_id | max_gap |
++------------+---------+
+|          2 |    NULL |
+|          3 |      20 |
+|          6 |    NULL |
+|          7 |    NULL |
+|          9 |    NULL |
+|         14 |    NULL |
+|         15 |    NULL |
+|         17 |    NULL |
+|         18 |    NULL |
+|         19 |    NULL |
+|         20 |    NULL |
+|         21 |     227 |
+|         23 |      64 |
+|         24 |    NULL |
+|         25 |    NULL |
+|         27 |    NULL |
+|         28 |     263 |
+|         29 |     120 |
+|         30 |      28 |
+|         32 |      42 |
+|         33 |      89 |
+|         35 |    NULL |
+|         36 |    NULL |
+|         37 |     223 |
+|         39 |    NULL |
+|         40 |      42 |
+|         41 |    NULL |
+|         42 |    NULL |
+|         43 |      92 |
+|         44 |    NULL |
+|         45 |      46 |
+|         46 |     286 |
+|         47 |    NULL |
+|         48 |    NULL |
+|         49 |    NULL |
+|         50 |     274 |
+|         51 |    NULL |
+|         52 |      32 |
+|         56 |    NULL |
+|         58 |    NULL |
+|         61 |    NULL |
+|         62 |    NULL |
+|         63 |    NULL |
+|         64 |    NULL |
+|         65 |    NULL |
+|         67 |    NULL |
+|         68 |      69 |
+|         69 |    NULL |
+|         70 |    NULL |
+|         71 |    NULL |
+|         72 |     271 |
+|         73 |    NULL |
+|         78 |     143 |
+|         81 |    NULL |
+|         82 |     192 |
+|         83 |     112 |
+|         84 |     192 |
+|         85 |     301 |
+|         86 |    NULL |
+|         87 |     248 |
+|         89 |    NULL |
+|         92 |      35 |
+|         94 |     237 |
+|         96 |      33 |
+|         97 |     281 |
++------------+---------+
+65 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++----------+-------------+------------+
+| staff_id | first_name  | last_name  |
++----------+-------------+------------+
+|        2 | Christopher | Bass       |
+|        8 | Christopher | Smith      |
+|        9 | Jamie       | Morales    |
+|       10 | Joseph      | Buchanan   |
+|       15 | Julia       | Pierce     |
+|       16 | Michelle    | Phillips   |
+|       17 | Donna       | Patrick    |
+|       21 | Courtney    | Evans      |
+|       23 | Hailey      | Walker     |
+|       24 | Tiffany     | Randall    |
+|       27 | Andrew      | Williams   |
+|       28 | Amy         | Ramsey     |
+|       30 | Dustin      | Myers      |
+|       32 | Michelle    | Morton     |
+|       34 | Omar        | Lara       |
+|       37 | Steve       | Watkins    |
+|       38 | Jonathan    | Cochran    |
+|       46 | Amy         | Burgess    |
+|       50 | Eric        | Swanson    |
+|       51 | Nancy       | Shepherd   |
+|       52 | Breanna     | Henry      |
+|       55 | Adam        | Gutierrez  |
+|       56 | Jose        | Howard     |
+|       57 | Jason       | Rice       |
+|       59 | Larry       | Rich       |
+|       60 | William     | Rivera     |
+|       61 | Paul        | Fields     |
+|       62 | Julie       | Preston    |
+|       63 | Debbie      | Pitts      |
+|       65 | Eric        | Hutchinson |
+|       66 | Vincent     | Barker     |
+|       67 | Steven      | Garcia     |
+|       70 | Todd        | Burton     |
+|       71 | Michael     | Diaz       |
+|       72 | Ryan        | Johnson    |
+|       77 | Chad        | Moran      |
+|       83 | Sherry      | Barber     |
+|       84 | Bryan       | Lawrence   |
+|       86 | Timothy     | Stewart    |
+|       89 | Jennifer    | Mclean     |
+|       90 | Jordan      | Hall       |
+|       91 | Richard     | Cooper     |
+|       93 | Sara        | Parker     |
+|       95 | Erin        | George     |
+|       96 | Shannon     | Walker     |
+|       98 | Christopher | Rodriguez  |
++----------+-------------+------------+
+46 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Empty set (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++------------+------------+-----------+
+| patient_id | first_name | last_name |
++------------+------------+-----------+
+|          1 | Elizabeth1 | Leonard   |
+|          4 | Nicole     | Estrada   |
+|          5 | James      | Casey     |
+|          8 | Melissa    | Jackson   |
+|         10 | Dale       | Phillips  |
+|         11 | Kevin      | Hull      |
+|         12 | Jennifer   | Porter    |
+|         13 | Samantha   | Paul      |
+|         16 | Jamie      | Kennedy   |
+|         22 | Katrina    | Vance     |
+|         26 | Charles    | Vargas    |
+|         31 | Tricia     | Klein     |
+|         34 | James      | Schultz   |
+|         38 | Amy        | Nolan     |
+|         53 | Yesenia    | Bright    |
+|         54 | Jacob      | Scott     |
+|         55 | Tina       | Davis     |
+|         57 | William    | West      |
+|         59 | Lawrence   | Parker    |
+|         60 | Joseph     | Dennis    |
+|         66 | Wayne      | Myers     |
+|         74 | John       | Brown     |
+|         75 | Julia      | Armstrong |
+|         76 | Heather    | Francis   |
+|         77 | Travis     | Moyer     |
+|         79 | Larry      | Mcclain   |
+|         80 | Julie      | Roberts   |
+|         88 | Jesse      | Thompson  |
+|         90 | Kevin      | Delgado   |
+|         91 | Gabriel    | Harper    |
+|         93 | Trevor     | Hale      |
+|         95 | Timothy    | Flowers   |
+|         98 | Kenneth    | Ross      |
+|         99 | Joseph     | King      |
+|        100 | Amanda     | Vasquez   |
++------------+------------+-----------+
+35 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++--------+---------------------------------------------------+------------+
+| gender | diagnosis                                         | occurrence |
++--------+---------------------------------------------------+------------+
+| M      | During must have effort effort.                   |          1 |
+| F      | Experience wish want ten boy majority.            |          1 |
+| F      | Power huge record cost be rather gas.             |          1 |
+| M      | Realize set interest church.                      |          1 |
+| F      | Dream image treatment.                            |          1 |
+| F      | Human red wide protect.                           |          1 |
+| M      | Air produce line person decision same laugh site. |          1 |
+| M      | Few hot establish.                                |          1 |
+| M      | Human eight and west media under practice art.    |          1 |
+| M      | Cost true daughter appear eat out left.           |          1 |
+| M      | Voice age act last son pressure.                  |          1 |
+| F      | Age director television free.                     |          1 |
+| F      | Decide toward cup item morning.                   |          1 |
+| M      | Rise especially then road blue help.              |          1 |
+| M      | No century live.                                  |          1 |
+| M      | Party star military. Better son line exist.       |          1 |
+| M      | Need eye TV.                                      |          1 |
+| M      | Develop blue president likely loss natural.       |          1 |
+| M      | Drop land able hour across order sport.           |          1 |
+| M      | Though food if.                                   |          1 |
+| F      | Issue citizen throughout friend act.              |          1 |
+| F      | Hit impact pick fine apply center.                |          1 |
+| F      | Peace page exactly air.                           |          1 |
+| M      | Practice financial professional majority.         |          1 |
+| M      | Stop item throughout space great audience.        |          1 |
+| M      | Statement my newspaper city stand near.           |          1 |
+| F      | Main contain though early.                        |          1 |
+| F      | Season laugh item some their.                     |          1 |
+| M      | Ball remember specific radio tree.                |          1 |
+| M      | Soon these church participant.                    |          1 |
+| M      | Little usually age.                               |          1 |
+| M      | Develop public success game.                      |          1 |
+| F      | Statement manager health keep.                    |          1 |
+| F      | Far street soon during.                           |          1 |
+| M      | Computer positive necessary economy throw.        |          1 |
+| M      | Find treat quite leg citizen. In eat plant.       |          1 |
+| F      | After north around.                               |          1 |
+| M      | Health garden bed dark usually.                   |          1 |
+| F      | Drive white concern draw near both tend.          |          1 |
+| M      | Who less expert how better else one.              |          1 |
+| F      | High successful value leg.                        |          1 |
+| M      | Occur seek shoulder enter must company agree not. |          1 |
+| F      | Note interview fast event.                        |          1 |
+| M      | Beyond safe approach better. Still think police.  |          1 |
+| M      | Per protect kind threat when miss.                |          1 |
+| M      | Face see maybe above suggest.                     |          1 |
+| M      | Top born put care consider we. Rest letter for.   |          1 |
+| F      | Group want health fall design.                    |          1 |
+| F      | Bar several half produce.                         |          1 |
+| F      | Show difficult employee now team rate arm.        |          1 |
+| F      | Different against join office someone.            |          1 |
+| M      | Place traditional site kid computer imagine.      |          1 |
+| M      | Mr whole who rich we upon role appear.            |          1 |
+| F      | Else education game first know system.            |          1 |
+| M      | Go force suddenly per.                            |          1 |
+| F      | Air too son without democratic church consider.   |          1 |
+| M      | Area candidate hair sing value black technology.  |          1 |
+| F      | Have too room hard choose.                        |          1 |
+| F      | Enter strong own look act watch.                  |          1 |
+| F      | Experience throughout degree return fill.         |          1 |
+| M      | Thought street address home put apply whole.      |          1 |
+| M      | Fly culture ago my certain about.                 |          1 |
+| F      | Goal approach enough sea ready.                   |          1 |
+| M      | Up between her campaign type when up.             |          1 |
+| F      | Partner measure reflect no truth.                 |          1 |
+| M      | Center our wall.                                  |          1 |
+| M      | Attention book others call marriage similar.      |          1 |
+| F      | Woman language instead fear fish.                 |          1 |
+| M      | Or little use leg ever sister light.              |          1 |
+| M      | Raise single third tree of sound.                 |          1 |
+| M      | Article despite trade organization space sort.    |          1 |
+| M      | Product agent way short Democrat TV.              |          1 |
+| F      | Hold particular bring force western.              |          1 |
+| F      | Around past truth thank.                          |          1 |
+| F      | Room manage station reality.                      |          1 |
+| M      | Loss lot full long oil machine culture.           |          1 |
+| F      | Blue power like voice.                            |          1 |
+| M      | Shake recent approach case.                       |          1 |
+| M      | Military clear business watch tonight much.       |          1 |
+| F      | Why six rather produce shake beyond.              |          1 |
+| F      | Most benefit game success cover.                  |          1 |
+| M      | Control pay perhaps much character whole.         |          1 |
+| F      | End finally mention court thing huge free.        |          1 |
+| M      | Put newspaper store.                              |          1 |
+| F      | Later nation choice reveal close.                 |          1 |
+| M      | Own language senior various.                      |          1 |
+| F      | Dinner choose old present.                        |          1 |
+| M      | Girl medical in audience lawyer go.               |          1 |
+| M      | Group walk drug religious ok.                     |          1 |
+| M      | Magazine forward role else these.                 |          1 |
+| F      | Know energy spring painting court.                |          1 |
+| M      | Support kitchen win.                              |          1 |
+| M      | Short draw population final him mean although.    |          1 |
+| M      | Listen heavy image seat.                          |          1 |
+| F      | Safe rate attack parent just wide prepare.        |          1 |
+| M      | Generation trouble affect provide section.        |          1 |
+| M      | Amount appear media thought radio political your. |          1 |
+| F      | Sense firm budget job during.                     |          1 |
+| F      | Word word letter city common discussion police.   |          1 |
+| M      | City I option.                                    |          1 |
++--------+---------------------------------------------------+------------+
+100 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++-------------+----------------------------------+---------+
+| provider_id | name                             | revenue |
++-------------+----------------------------------+---------+
+|           2 | Griffin-Brown                    | 3062.70 |
+|          82 | Gomez-Harper                     | 1453.67 |
+|          74 | Ferguson PLC                     |  578.96 |
+|          54 | Howell Inc                       | 1112.66 |
+|          34 | Wall-Williams                    | 1733.95 |
+|          18 | Miller-Rodriguez                 |  613.34 |
+|          49 | Richards LLC                     | 1287.31 |
+|          22 | Rodgers PLC                      |  554.97 |
+|          89 | Stewart, Fox and Moore           | 4034.82 |
+|          57 | Holmes Inc                       | 1379.58 |
+|          61 | Garcia-Jackson                   | 2064.04 |
+|          31 | Russell, Brown and Huang         |  158.40 |
+|          92 | Roberts-Boyd                     | 1515.48 |
+|          44 | Skinner-Mason                    | 1822.02 |
+|          59 | Anthony, Villarreal and Morrison |  665.42 |
+|          97 | Cook-Perez                       |  638.96 |
+|           7 | Carroll-Lozano                   |  342.12 |
+|          32 | Simpson Group                    | 3288.26 |
+|          30 | Wilson and Sons                  |  877.84 |
+|          21 | Franco, Warner and King          | 1257.98 |
+|          87 | Shea-Mullins                     | 1220.96 |
+|           5 | Hernandez-Warner                 | 3000.25 |
+|          81 | Keith Inc                        |  154.12 |
+|          42 | Donovan Group                    |  428.92 |
+|          11 | Norton PLC                       |  909.24 |
+|          72 | Nicholson, Montgomery and Gomez  |  717.70 |
+|          13 | Rowe-Stevenson                   | 1670.02 |
+|          36 | Holt-Lee                         | 2203.64 |
+|           9 | Kelly, Williams and Carter       | 1575.29 |
+|          66 | Yu-Zimmerman                     | 2876.13 |
+|         100 | Hart-Norris                      |  737.61 |
+|           1 | Zamora-Greer                     | 1912.21 |
+|          73 | Cox LLC                          |  724.16 |
+|          79 | Wagner, Johnson and Gutierrez    |  808.38 |
+|          65 | Wells, Tyler and Yang            |  147.60 |
+|          14 | Williams, Burke and Simmons      |  616.56 |
+|          24 | Hicks, Mitchell and Foster       | 1302.33 |
+|          48 | Riggs-Shelton                    |  430.69 |
+|          69 | Stone-Johnson                    | 1101.39 |
+|          68 | Barnes-Hahn                      |  855.17 |
+|          75 | Watkins-Collins                  |  996.31 |
+|          86 | Wiley, Williams and Frazier      |  288.49 |
+|          91 | Johnson, Rose and Salazar        |  119.49 |
++-------------+----------------------------------+---------+
+43 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++----------+-------------+-----------+--------------------+
+| staff_id | first_name  | last_name | diagnoses_recorded |
++----------+-------------+-----------+--------------------+
+|       97 | Ricky       | Peck      |                  4 |
+|       12 | Nancy       | Frazier   |                  4 |
+|       64 | Connie      | Hernandez |                  4 |
+|      100 | Priscilla   | Murphy    |                  3 |
+|       10 | Joseph      | Buchanan  |                  3 |
+|       89 | Jennifer    | Mclean    |                  3 |
+|       24 | Tiffany     | Randall   |                  3 |
+|       76 | Amy         | Collier   |                  3 |
+|       46 | Amy         | Burgess   |                  3 |
+|        3 | Sheila      | Mann      |                  2 |
+|        4 | Jennifer    | Bailey    |                  2 |
+|        6 | Sean        | Anderson  |                  2 |
+|        9 | Jamie       | Morales   |                  2 |
+|       15 | Julia       | Pierce    |                  2 |
+|       18 | Robert      | Garcia    |                  2 |
+|       79 | Steven      | Bowman    |                  2 |
+|       21 | Courtney    | Evans     |                  2 |
+|       78 | Edwin       | Ellis     |                  2 |
+|       26 | Jessica     | George    |                  2 |
+|       27 | Andrew      | Williams  |                  2 |
+|       28 | Amy         | Ramsey    |                  2 |
+|       69 | Jodi        | Brown     |                  2 |
+|       66 | Vincent     | Barker    |                  2 |
+|       61 | Paul        | Fields    |                  2 |
+|       57 | Jason       | Rice      |                  2 |
+|       50 | Eric        | Swanson   |                  2 |
+|       43 | Christopher | Torres    |                  1 |
+|       41 | Amy         | Cruz      |                  1 |
+|       48 | Rhonda      | Morse     |                  1 |
+|       40 | Terri       | Banks     |                  1 |
+|       52 | Breanna     | Henry     |                  1 |
+|        1 | Terri       | Welch     |                  1 |
+|       54 | Sierra      | Thomas    |                  1 |
+|       55 | Adam        | Gutierrez |                  1 |
+|       39 | Michael     | Ortega    |                  1 |
+|       59 | Larry       | Rich      |                  1 |
+|       60 | William     | Rivera    |                  1 |
+|       35 | Mark        | Schultz   |                  1 |
+|       62 | Julie       | Preston   |                  1 |
+|       34 | Omar        | Lara      |                  1 |
+|       33 | Jeanette    | Santana   |                  1 |
+|       31 | Yvonne      | Cook      |                  1 |
+|       71 | Michael     | Diaz      |                  1 |
+|       72 | Ryan        | Johnson   |                  1 |
+|       73 | Steven      | Patrick   |                  1 |
+|       29 | Robert      | Gutierrez |                  1 |
+|       77 | Chad        | Moran     |                  1 |
+|       22 | Christopher | Williams  |                  1 |
+|       20 | Erin        | Adkins    |                  1 |
+|       81 | John        | Ward      |                  1 |
+|       83 | Sherry      | Barber    |                  1 |
+|       84 | Bryan       | Lawrence  |                  1 |
+|       86 | Timothy     | Stewart   |                  1 |
+|       17 | Donna       | Patrick   |                  1 |
+|       90 | Jordan      | Hall      |                  1 |
+|       92 | Joshua      | Frye      |                  1 |
+|       93 | Sara        | Parker    |                  1 |
+|       94 | Julie       | Roman     |                  1 |
+|       96 | Shannon     | Walker    |                  1 |
+|        8 | Christopher | Smith     |                  1 |
+|       99 | Shannon     | Watson    |                  1 |
+|       53 | Todd        | Atkinson  |                  1 |
++----------+-------------+-----------+--------------------+
+62 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++---------------------------------------------------+----------+
+| diagnosis                                         | avg_age  |
++---------------------------------------------------+----------+
+| During must have effort effort.                   |  18.0000 |
+| Experience wish want ten boy majority.            |  91.0000 |
+| Power huge record cost be rather gas.             |  81.0000 |
+| Realize set interest church.                      |   2.0000 |
+| Dream image treatment.                            |  46.0000 |
+| Human red wide protect.                           |  51.0000 |
+| Air produce line person decision same laugh site. |  17.0000 |
+| Few hot establish.                                | 114.0000 |
+| Human eight and west media under practice art.    |  62.0000 |
+| Cost true daughter appear eat out left.           |  25.0000 |
+| Voice age act last son pressure.                  |  92.0000 |
+| Age director television free.                     |  46.0000 |
+| Decide toward cup item morning.                   |  49.0000 |
+| Rise especially then road blue help.              |  59.0000 |
+| No century live.                                  |  63.0000 |
+| Party star military. Better son line exist.       | 114.0000 |
+| Need eye TV.                                      |  14.0000 |
+| Develop blue president likely loss natural.       | 109.0000 |
+| Drop land able hour across order sport.           |  94.0000 |
+| Though food if.                                   |  39.0000 |
+| Issue citizen throughout friend act.              |   8.0000 |
+| Hit impact pick fine apply center.                |  29.0000 |
+| Peace page exactly air.                           |  39.0000 |
+| Practice financial professional majority.         | 109.0000 |
+| Stop item throughout space great audience.        |  95.0000 |
+| Statement my newspaper city stand near.           | 100.0000 |
+| Main contain though early.                        | 109.0000 |
+| Season laugh item some their.                     |   3.0000 |
+| Ball remember specific radio tree.                |  81.0000 |
+| Soon these church participant.                    |   2.0000 |
+| Little usually age.                               |  62.0000 |
+| Develop public success game.                      |  25.0000 |
+| Statement manager health keep.                    |  29.0000 |
+| Far street soon during.                           |  20.0000 |
+| Computer positive necessary economy throw.        |  14.0000 |
+| Find treat quite leg citizen. In eat plant.       |  94.0000 |
+| After north around.                               |  51.0000 |
+| Health garden bed dark usually.                   |   4.0000 |
+| Drive white concern draw near both tend.          |  48.0000 |
+| Who less expert how better else one.              |  62.0000 |
+| High successful value leg.                        |  77.0000 |
+| Occur seek shoulder enter must company agree not. |  10.0000 |
+| Note interview fast event.                        |  49.0000 |
+| Beyond safe approach better. Still think police.  |  74.0000 |
+| Per protect kind threat when miss.                |   0.0000 |
+| Face see maybe above suggest.                     |  31.0000 |
+| Top born put care consider we. Rest letter for.   |  62.0000 |
+| Group want health fall design.                    |  23.0000 |
+| Bar several half produce.                         |  48.0000 |
+| Show difficult employee now team rate arm.        |  48.0000 |
+| Different against join office someone.            |  95.0000 |
+| Place traditional site kid computer imagine.      |  14.0000 |
+| Mr whole who rich we upon role appear.            |   2.0000 |
+| Else education game first know system.            |  48.0000 |
+| Go force suddenly per.                            |  96.0000 |
+| Air too son without democratic church consider.   |  51.0000 |
+| Area candidate hair sing value black technology.  |  74.0000 |
+| Have too room hard choose.                        |  54.0000 |
+| Enter strong own look act watch.                  |  96.0000 |
+| Experience throughout degree return fill.         |  54.0000 |
+| Thought street address home put apply whole.      |  39.0000 |
+| Fly culture ago my certain about.                 | 104.0000 |
+| Goal approach enough sea ready.                   |  26.0000 |
+| Up between her campaign type when up.             | 109.0000 |
+| Partner measure reflect no truth.                 |  20.0000 |
+| Center our wall.                                  |  62.0000 |
+| Attention book others call marriage similar.      |  81.0000 |
+| Woman language instead fear fish.                 |  36.0000 |
+| Or little use leg ever sister light.              |  10.0000 |
+| Raise single third tree of sound.                 |  43.0000 |
+| Article despite trade organization space sort.    |  89.0000 |
+| Product agent way short Democrat TV.              |  17.0000 |
+| Hold particular bring force western.              |  96.0000 |
+| Around past truth thank.                          |  62.0000 |
+| Room manage station reality.                      |  51.0000 |
+| Loss lot full long oil machine culture.           |  84.0000 |
+| Blue power like voice.                            |  29.0000 |
+| Shake recent approach case.                       |  10.0000 |
+| Military clear business watch tonight much.       |  42.0000 |
+| Why six rather produce shake beyond.              |  49.0000 |
+| Most benefit game success cover.                  |   3.0000 |
+| Control pay perhaps much character whole.         |  33.0000 |
+| End finally mention court thing huge free.        | 109.0000 |
+| Put newspaper store.                              |   4.0000 |
+| Later nation choice reveal close.                 |  51.0000 |
+| Own language senior various.                      |  31.0000 |
+| Dinner choose old present.                        |  20.0000 |
+| Girl medical in audience lawyer go.               |  89.0000 |
+| Group walk drug religious ok.                     |  85.0000 |
+| Magazine forward role else these.                 |  43.0000 |
+| Know energy spring painting court.                |  39.0000 |
+| Support kitchen win.                              |  57.0000 |
+| Short draw population final him mean although.    |   9.0000 |
+| Listen heavy image seat.                          |  48.0000 |
+| Safe rate attack parent just wide prepare.        |  62.0000 |
+| Generation trouble affect provide section.        |  92.0000 |
+| Amount appear media thought radio political your. |  92.0000 |
+| Sense firm budget job during.                     |  39.0000 |
+| Word word letter city common discussion police.   |  95.0000 |
+| City I option.                                    |  25.0000 |
++---------------------------------------------------+----------+
+100 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++----------+-------------+-----------+----------------------+
+| staff_id | first_name  | last_name | appointments_handled |
++----------+-------------+-----------+----------------------+
+|        1 | Terri       | Welch     |                    1 |
+|        3 | Sheila      | Mann      |                    3 |
+|        4 | Jennifer    | Bailey    |                    1 |
+|        5 | Alexandria  | Daniel    |                    1 |
+|        6 | Sean        | Anderson  |                    1 |
+|        7 | David       | Brock     |                    2 |
+|       11 | John        | Meyer     |                    1 |
+|       12 | Nancy       | Frazier   |                    2 |
+|       13 | Marisa      | Harris    |                    1 |
+|       14 | Andrew      | Harris    |                    2 |
+|       18 | Robert      | Garcia    |                    1 |
+|       19 | James       | Lambert   |                    3 |
+|       20 | Erin        | Adkins    |                    2 |
+|       22 | Christopher | Williams  |                    4 |
+|       25 | Kenneth     | Tapia     |                    1 |
+|       26 | Jessica     | George    |                    2 |
+|       29 | Robert      | Gutierrez |                    1 |
+|       31 | Yvonne      | Cook      |                    2 |
+|       33 | Jeanette    | Santana   |                    3 |
+|       35 | Mark        | Schultz   |                    3 |
+|       36 | Nicholas    | Jones     |                    2 |
+|       39 | Michael     | Ortega    |                    3 |
+|       40 | Terri       | Banks     |                    1 |
+|       41 | Amy         | Cruz      |                    2 |
+|       42 | Heather     | Smith     |                    4 |
+|       43 | Christopher | Torres    |                    2 |
+|       44 | Howard      | Reyes     |                    1 |
+|       45 | Frank       | Reyes     |                    2 |
+|       47 | Patrick     | Sloan     |                    1 |
+|       48 | Rhonda      | Morse     |                    4 |
+|       49 | Jeremiah    | Hurley    |                    1 |
+|       53 | Todd        | Atkinson  |                    3 |
+|       54 | Sierra      | Thomas    |                    2 |
+|       58 | Justin      | Wallace   |                    2 |
+|       64 | Connie      | Hernandez |                    1 |
+|       68 | James       | Harris    |                    2 |
+|       69 | Jodi        | Brown     |                    2 |
+|       73 | Steven      | Patrick   |                    2 |
+|       74 | Sara        | Le        |                    2 |
+|       75 | Bonnie      | Thomas    |                    1 |
+|       76 | Amy         | Collier   |                    1 |
+|       78 | Edwin       | Ellis     |                    2 |
+|       79 | Steven      | Bowman    |                    2 |
+|       80 | Stanley     | Wong      |                    3 |
+|       81 | John        | Ward      |                    1 |
+|       82 | Kim         | Green     |                    2 |
+|       85 | Nicholas    | Reeves    |                    1 |
+|       87 | Jonathan    | Jenkins   |                    1 |
+|       88 | Karen       | Montoya   |                    2 |
+|       92 | Joshua      | Frye      |                    1 |
+|       94 | Julie       | Roman     |                    1 |
+|       97 | Ricky       | Peck      |                    1 |
+|       99 | Shannon     | Watson    |                    3 |
+|      100 | Priscilla   | Murphy    |                    2 |
++----------+-------------+-----------+----------------------+
+54 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Empty set (0.01 sec)
+
+mysql> notee;
